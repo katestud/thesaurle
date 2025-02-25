@@ -21,12 +21,17 @@ def get_synonyms_subset(word, corpus):
 def choose_synonym(list):
   return random.choice(list)
 
-def game_setup(start_word, length):
-  path = []
-  current = start_word
+def game_setup(current, length, corpus):
+  path = [current]
 
   for i in range(length):
-    synonyms = get_synonyms_subset(current, common_words)
+    # Blow up if the start word is terrible
+    synonyms = get_synonyms_subset(current, corpus)
+    while len(synonyms) == 0:
+      path = path[:-1]
+      current = path[-1]
+      synonyms = get_synonyms_subset(current, corpus)
+
     current = choose_synonym(synonyms)
     path.append(current)
 
@@ -51,7 +56,8 @@ def play_the_game(starting_word, end_word, num_turns, corpus):
     print(f"You can get from {starting_word} to {end_word} in {num_turns} steps")
     synonyms = get_synonyms_subset(starting_word, corpus)
     for i in range(num_turns):
-        print(synonyms)
+        print("")
+        print(f"Your options are: {synonyms}")
         synonyms = take_turn(end_word, synonyms, corpus)
         if len(synonyms) == 0:
             print("Hooray")
@@ -62,7 +68,10 @@ common_words = wordfreq.top_n_list('en', 5000)
 max_length = 5
 start_word = "stand"
 
-path = game_setup(start_word, max_length)
+print("Initializing game play!")
+path = game_setup(start_word, max_length, common_words)
+print("Secret path")
+print(path)
 end_word = path[-1]
 
 play_the_game(start_word, end_word, max_length, common_words)
