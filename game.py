@@ -62,7 +62,7 @@ def play_the_game(starting_word, end_word, num_turns):
         print(f"Your options are: {synonyms}")
         synonyms = take_turn(end_word, synonyms)
         if len(synonyms) == 0:
-            print("🎉🎉🎉 Hooray 🎉🎉🎉!")
+            print("🎉🎉🎉 Hooray!!! 🎉🎉🎉")
             return
     print("Sorry, you lost!")
 
