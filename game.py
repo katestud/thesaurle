@@ -1,6 +1,8 @@
 import random
 import requests
 import os
+import csv
+
 from dotenv import load_dotenv
 
 CORPUS_FILE = 'data/first20hours-google-10000-english-20k.txt'
@@ -9,6 +11,17 @@ def read_file_to_list(filename):
     with open(filename, mode='r') as file:
         lines = file.read().splitlines()
     return lines
+
+def read_dictionary_tsv(filename):
+    synonym_dict = dict()
+    with open(filename, mode='r') as file:
+        reader = csv.reader(file, delimiter='\t')
+        for row in reader:
+           if len(row) > 1:
+            key = row[0]
+            synonym_dict[key] = row[1].split(',')
+    return synonym_dict
+
 
 load_dotenv()
 
@@ -80,7 +93,10 @@ print("Secret path")
 print(path)
 end_word = path[-1]
 
-play_the_game(start_word, end_word, max_length, common_words)
+# play_the_game(start_word, end_word, max_length, common_words)
 
 ## TODO: Sometimes the game logic seems to lie about how many steps we took to
 # get to the final word
+
+syns = read_dictionary_tsv("data/synonyms.tsv")
+print(syns["jewelry"])
