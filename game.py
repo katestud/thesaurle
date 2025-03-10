@@ -23,9 +23,6 @@ def get_synonyms(word):
     return SYNONYMS[word]
   return []
 
-def choose_synonym(list):
-  return random.choice(list)
-
 def game_setup(current, length):
   path = [current]
 
@@ -37,7 +34,7 @@ def game_setup(current, length):
       current = path[-1]
       synonyms = get_synonyms(current)
 
-    current = choose_synonym(synonyms)
+    current = random.choice(list)
     path.append(current)
 
   return path
@@ -65,7 +62,7 @@ def play_the_game(starting_word, end_word, num_turns):
         print(f"Your options are: {synonyms}")
         synonyms = take_turn(end_word, synonyms)
         if len(synonyms) == 0:
-            print("Hooray")
+            print("🎉🎉🎉 Hooray 🎉🎉🎉!")
             return
     print("Sorry, you lost!")
 
