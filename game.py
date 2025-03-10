@@ -17,7 +17,6 @@ def read_dictionary_tsv(filename):
     return synonym_dict
 
 SYNONYMS = read_dictionary_tsv("data/synonyms.tsv")
-print(SYNONYMS["jewelry"])
 
 def get_synonyms(word):
   if word in SYNONYMS:
