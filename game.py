@@ -1,8 +1,14 @@
-import wordfreq
 import random
 import requests
 import os
 from dotenv import load_dotenv
+
+CORPUS_FILE = 'data/first20hours-google-10000-english-20k.txt'
+
+def read_file_to_list(filename):
+    with open(filename, mode='r') as file:
+        lines = file.read().splitlines()
+    return lines
 
 load_dotenv()
 
@@ -64,7 +70,7 @@ def play_the_game(starting_word, end_word, num_turns, corpus):
             return
     print("Sorry, you lost!")
 
-common_words = wordfreq.top_n_list('en', 5000)
+common_words = read_file_to_list(CORPUS_FILE)
 max_length = 5
 start_word = "stand"
 
@@ -75,3 +81,6 @@ print(path)
 end_word = path[-1]
 
 play_the_game(start_word, end_word, max_length, common_words)
+
+## TODO: Sometimes the game logic seems to lie about how many steps we took to
+# get to the final word
