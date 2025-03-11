@@ -23,19 +23,38 @@ def get_synonyms(word):
     return SYNONYMS[word]
   return []
 
-def game_setup(current, length):
-  path = [current]
+def game_setup(length):
 
-  for i in range(length):
-    # Blow up if the start word is terrible
-    synonyms = get_synonyms(current)
-    while len(synonyms) == 0:
-      path = path[:-1]
-      current = path[-1]
+  path_success = False
+
+  while not path_success:
+
+    current = random.choice(list(SYNONYMS.keys()))
+    path = [current]
+
+    seen_words = set([])
+
+    for i in range(length):
+      # Blow up if the start word is terrible
       synonyms = get_synonyms(current)
 
-    current = random.choice(synonyms)
-    path.append(current)
+      # TODO: do we need this logic for missing synonyms
+      while len(synonyms) == 0:
+        path = path[:-1]
+        current = path[-1]
+        synonyms = get_synonyms(current)
+
+      possible_choices = list(set(synonyms).difference(seen_words))
+      if len(possible_choices) == 0:
+        path_success = False 
+        break
+      current = random.choice(possible_choices)
+      
+      seen_words.update(synonyms)
+      print("seen words:")
+      print(seen_words)
+      path.append(current)
+    path_success = True 
 
   return path
 
@@ -48,7 +67,9 @@ def play_the_game(start_word, target_word, num_turns):
   turns_taken = 0
   game_won = False
 
-  while not game_won and turns_taken < num_turns:
+  factor = 2
+
+  while not game_won and turns_taken < factor * num_turns:
     turns_taken = turns_taken + 1
     print(guess_options)
     guess = input("enter your guess:")
@@ -66,17 +87,14 @@ def play_the_game(start_word, target_word, num_turns):
 
 num_turns = 5
 
-starting_word = random.choice(list(SYNONYMS.keys()))
 
 print("Initializing game play!")
-path = game_setup(starting_word, num_turns)
+path = game_setup(num_turns)
 print("Secret path")
 print(path)
 end_word = path[-1]
 
-play_the_game(starting_word, end_word, num_turns)
-
-
+play_the_game(path[0], end_word, num_turns)
 
 
 
