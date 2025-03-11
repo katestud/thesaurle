@@ -40,6 +40,30 @@ def game_setup(current, length):
   return path
 
 
+def play_the_game(start_word, target_word, num_turns):
+
+  print(f"You can get from {start_word} to {target_word} in {num_turns} steps")
+  guess_options = get_synonyms(start_word)
+
+  turns_taken = 0
+  game_won = False
+
+  while not game_won and turns_taken < num_turns:
+    turns_taken = turns_taken + 1
+    print(guess_options)
+    guess = input("enter your guess:")
+    if not (guess in guess_options): 
+      print("not a valid guess")
+    else: 
+      if guess == target_word:
+        game_won = True 
+      else: 
+        guess_options = get_synonyms(guess)
+
+  if(game_won):
+    print("🎉🎉🎉 Hooray 🎉🎉🎉!")
+
+
 num_turns = 5
 
 starting_word = random.choice(list(SYNONYMS.keys()))
@@ -50,27 +74,10 @@ print("Secret path")
 print(path)
 end_word = path[-1]
 
-print(f"You can get from {starting_word} to {end_word} in {num_turns} steps")
-guess_options = get_synonyms(starting_word)
+play_the_game(starting_word, end_word, num_turns)
 
 
-turns_taken = 0
-game_won = False
 
-while not game_won and turns_taken < num_turns:
-  turns_taken = turns_taken + 1
-  print(guess_options)
-  guess = input("enter your guess:")
-  if not (guess in guess_options): 
-    print("not a valid guess")
-  else: 
-    if guess == end_word:
-      game_won = True 
-    else: 
-      guess_options = get_synonyms(guess)
-
-if(game_won):
-  print("🎉🎉🎉 Hooray 🎉🎉🎉!")
 
 
 # put game logic in a function 
