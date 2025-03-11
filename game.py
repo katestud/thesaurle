@@ -35,26 +35,17 @@ def game_setup(length):
     seen_words = set([])
 
     for i in range(length):
-      # Blow up if the start word is terrible
       synonyms = get_synonyms(current)
-
-      # TODO: do we need this logic for missing synonyms
-      while len(synonyms) == 0:
-        path = path[:-1]
-        current = path[-1]
-        synonyms = get_synonyms(current)
 
       possible_choices = list(set(synonyms).difference(seen_words))
       if len(possible_choices) == 0:
-        path_success = False 
+        path_success = False
         break
       current = random.choice(possible_choices)
-      
+
       seen_words.update(synonyms)
-      print("seen words:")
-      print(seen_words)
       path.append(current)
-    path_success = True 
+    path_success = True
 
   return path
 
@@ -73,12 +64,12 @@ def play_the_game(start_word, target_word, num_turns):
     turns_taken = turns_taken + 1
     print(guess_options)
     guess = input("enter your guess:")
-    if not (guess in guess_options): 
+    if not (guess in guess_options):
       print("not a valid guess")
-    else: 
+    else:
       if guess == target_word:
-        game_won = True 
-      else: 
+        game_won = True
+      else:
         guess_options = get_synonyms(guess)
 
   if(game_won):
@@ -98,11 +89,11 @@ play_the_game(path[0], end_word, num_turns)
 
 
 
-# put game logic in a function 
-# cycles in the synonums 
+# put game logic in a function
+# cycles in the synonums
 # history-aware BFS
-# number of turns 
-# better relationship bw numturns and path length 
+# number of turns
+# better relationship bw numturns and path length
 
 
 
