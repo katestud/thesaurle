@@ -50,7 +50,9 @@ def game_setup(length):
   return path
 
 
-def play_the_game(start_word, target_word, num_turns):
+def play_the_game(path, num_turns):
+  start_word = path[0]
+  target_word = path[-1]
 
   print(f"You can get from {start_word} to {target_word} in {num_turns} steps")
   guess_options = get_synonyms(start_word)
@@ -63,7 +65,13 @@ def play_the_game(start_word, target_word, num_turns):
   while not game_won and turns_taken < factor * num_turns:
     turns_taken = turns_taken + 1
     print(guess_options)
-    guess = input("enter your guess:")
+
+    try:
+      guess = input("enter your guess: ")
+    except KeyboardInterrupt:
+      print("quitting game")
+      break
+
     if not (guess in guess_options):
       print("not a valid guess")
     else:
@@ -75,23 +83,14 @@ def play_the_game(start_word, target_word, num_turns):
   if(game_won):
     print("🎉🎉🎉 Hooray 🎉🎉🎉!")
 
-
 num_turns = 5
-
-
 print("Initializing game play!")
 path = game_setup(num_turns)
 print("Secret path")
 print(path)
-end_word = path[-1]
 
-play_the_game(path[0], end_word, num_turns)
+play_the_game(path, num_turns)
 
-
-
-# put game logic in a function
-# cycles in the synonums
-# history-aware BFS
 # number of turns
 # better relationship bw numturns and path length
 
