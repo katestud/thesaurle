@@ -32,9 +32,9 @@ def game_setup(length):
     current = random.choice(list(SYNONYMS.keys()))
     path = [current]
 
-    seen_words = set([])
+    seen_words = set([current])
 
-    for i in range(length):
+    for _ in range(length):
       synonyms = get_synonyms(current)
 
       possible_choices = list(set(synonyms).difference(seen_words))
@@ -51,6 +51,9 @@ def game_setup(length):
 
 
 def play_the_game(path, num_turns):
+  # TODO: Remove the previous guesses that you've taken from the list of your options
+  # TODO: Show your history of guesses
+
   start_word = path[0]
   target_word = path[-1]
 
@@ -59,15 +62,20 @@ def play_the_game(path, num_turns):
 
   turns_taken = 0
   game_won = False
+  taken_guesses = []
 
   factor = 2
 
   while not game_won and turns_taken < factor * num_turns:
     turns_taken = turns_taken + 1
-    print(guess_options)
+    for index, o in enumerate(guess_options):
+      print(f"{index}: {o}")
 
     try:
-      guess = input("enter your guess: ")
+      guess_index = input("enter your guess: ")
+      # TODO: Validate the input
+      guess = guess_options[int(guess_index)]
+      print(f"You chose: {guess}")
     except KeyboardInterrupt:
       print("quitting game")
       break
@@ -78,6 +86,8 @@ def play_the_game(path, num_turns):
       if guess == target_word:
         game_won = True
       else:
+        taken_guesses.append(guess)
+        print(f"Guesses so far: {taken_guesses}. Try to get to {target_word}")
         guess_options = get_synonyms(guess)
 
   if(game_won):
@@ -93,7 +103,4 @@ play_the_game(path, num_turns)
 
 # number of turns
 # better relationship bw numturns and path length
-
-
-
 
