@@ -7,25 +7,26 @@ cursor = conn.cursor()
 start_word = 'sale'
 end_word = 'green'
 
+def print_shortest_path(start, end, max_hops=None):
+    if max_hops:
+      query = f"""
+      MATCH path=(n:Word {{name: $start_word}})-[relationships:SYNONYM *BFS ..{max_hops}]->(m:Word {{name: $end_word}})
+      RETURN nodes(path);
+      """
+    else:
+      query = """
+      MATCH path=(n:Word {name: $start_word})-[relationships:SYNONYM *BFS]->(m:Word {name: $end_word})
+      RETURN nodes(path);
+      """
+    cursor.execute(query, {'start_word': start, 'end_word': end})
+    return cursor.fetchall()
+
 print("======================SHORTEST PATH=====================")
-# Query to find the shortest path between two words, using BFS
-query = """
-MATCH path=(n:Word {name: $start_word})-[relationships:SYNONYM *BFS]->(m:Word {name: $end_word})
-RETURN nodes(path);
-"""
-cursor.execute(query, {'start_word': start_word, 'end_word': end_word})
-r = cursor.fetchall()
-print(r)
+print(print_shortest_path(start_word, end_word))
+
 
 print("======================SHORTEST PATH UP TO 10=====================")
-# Query to find the shortest path between two words, using BFS, constrained to a particular length
-query = """
-MATCH path=(n:Word {name: $start_word})-[relationships:SYNONYM *BFS ..10]->(m:Word {name: $end_word})
-RETURN nodes(path);
-"""
-cursor.execute(query, {'start_word': start_word, 'end_word': end_word})
-r = cursor.fetchall()
-print(r)
+print(print_shortest_path(start_word, end_word, 10))
 
 print("======================DIRECT RELATIONSHIP=====================")
 # Query to print the direct relationship between two words, if it exists
