@@ -22,7 +22,29 @@ Data collection is still in progress.
 
 ## GraphDB:
 
+Data can now be stored and queried using a Memgraph database. This is implemented
+using docker (currently).
+
+To start up the database server and the console:
 ```
 docker run -p 7687:7687 -d --name memgraph memgraph/memgraph
 docker exec -it memgraph mgconsole
 ```
+
+To migrate data (insert it into the database), run the migration file:
+`python db/migrate.py`. This only needs to be run once (unless it changes).
+Maybe we need a Makefile.
+
+> [!NOTE]
+> The migration step is not super performant. It will take about 8 minutes or
+> so to insert all the data into the database. The command currently scrubs
+> the database at the start of the command so that it's using a fresh data set,
+> but because the command is idempotent (the MERGE command will not overwrite)
+> existing data.
+> Also note that memgraph only supports one database per machine so we may want
+> to ship the database inside of the container to keep it separate from any
+> local data. TBD! (We might also be able to get a DB dump and load from there
+> rather than inserting but not today, Satan.)
+
+To run sample queries against the database, execute `python sample_queries.py`.
+
