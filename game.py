@@ -51,9 +51,6 @@ def game_setup(length):
 
 
 def play_the_game(path, num_turns):
-  # TODO: Remove the previous guesses that you've taken from the list of your options
-  # TODO: Show your history of guesses
-
   start_word = path[0]
   target_word = path[-1]
 
