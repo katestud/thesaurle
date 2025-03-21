@@ -1,13 +1,12 @@
 import mgclient
 
-# Connect to Memgraph
 conn = mgclient.connect(host="127.0.0.1", port=7687)
 cursor = conn.cursor()
 
 start_word = 'sale'
 end_word = 'green'
 
-def print_shortest_path(start, end, max_hops=None):
+def fetch_shortest_path(start, end, max_hops=None):
     if max_hops:
       query = f"""
       MATCH path=(n:Word {{name: $start_word}})-[relationships:SYNONYM *BFS ..{max_hops}]->(m:Word {{name: $end_word}})
@@ -22,11 +21,10 @@ def print_shortest_path(start, end, max_hops=None):
     return cursor.fetchall()
 
 print("======================SHORTEST PATH=====================")
-print(print_shortest_path(start_word, end_word))
-
+print(fetch_shortest_path(start_word, end_word))
 
 print("======================SHORTEST PATH UP TO 10=====================")
-print(print_shortest_path(start_word, end_word, 10))
+print(fetch_shortest_path(start_word, end_word, 10))
 
 print("======================DIRECT RELATIONSHIP=====================")
 # Query to print the direct relationship between two words, if it exists
