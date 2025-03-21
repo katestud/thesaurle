@@ -20,6 +20,12 @@ def fetch_shortest_path(start, end, max_hops=None):
     cursor.execute(query, {'start_word': start, 'end_word': end})
     return cursor.fetchall()
 
+# Given a tuple result of nodes from a `fetchall` query, print the nodes names
+def print_path(path):
+    for row in path:
+        for item in row[0]:
+            print(item.properties['name'])
+
 print("======================SHORTEST PATH=====================")
 print(fetch_shortest_path(start_word, end_word))
 
@@ -47,6 +53,23 @@ results = cursor.fetchall()
 
 for row in results:
     print(row)
+
+random_associations = [
+  ('faithful', 'cheat'),
+  ('subway', 'lattice'),
+  ('carver', 'chill'),
+  ('sale', 'green'),
+  ('audience', 'crowd'),
+  ('purchase', 'sale'),
+  ('outreach', 'boulder'),
+  ('en', 'sn')
+]
+
+for start, end in random_associations:
+  print(f"======================{start} TO {end}=====================")
+  path = fetch_shortest_path(start, end)
+  print_path(path)
+
 
 # Close connection
 conn.close()
