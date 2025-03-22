@@ -1,22 +1,7 @@
 import random
-import csv
+import dictionary
 
-def read_file_to_list(filename):
-    with open(filename, mode='r') as file:
-        lines = file.read().splitlines()
-    return lines
-
-def read_dictionary_tsv(filename):
-    synonym_dict = dict()
-    with open(filename, mode='r') as file:
-        reader = csv.reader(file, delimiter='\t')
-        for row in reader:
-           if len(row) > 1:
-            key = row[0]
-            synonym_dict[key] = row[1].split(',')
-    return synonym_dict
-
-SYNONYMS = read_dictionary_tsv("data/synonyms.tsv")
+SYNONYMS = dictionary.build_dictionary()
 
 def get_synonyms(word):
   if word in SYNONYMS:

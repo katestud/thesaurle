@@ -1,2 +1,5 @@
 .env
 wordhoard_error.yaml
+tmp/
+
+__pycache__/
