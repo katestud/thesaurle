@@ -5,12 +5,17 @@ conn = mgclient.connect(host="127.0.0.1", port=7687)
 cursor = conn.cursor()
 
 def fetch_shortest_path(start, end, max_hops=10):
-    query = f"""
-    MATCH path=(n:Word {{name: $start_word}})-[relationships:SYNONYM *BFS ..{max_hops}]->(m:Word {{name: $end_word}})
-    RETURN nodes(path);
-    """
-    cursor.execute(query, {'start_word': start, 'end_word': end})
-    return cursor.fetchall()
+  query = f"""
+  MATCH path=(n:Word {{name: $start_word}})-[relationships:SYNONYM *BFS ..{max_hops}]->(m:Word {{name: $end_word}})
+  RETURN nodes(path);
+  """
+  cursor.execute(query, {'start_word': start, 'end_word': end})
+  path = []
+  for row in cursor.fetchall():
+    for item in row[0]:
+      path.append(item.properties['name'])
+
+  return path
 
 def get_synonyms(word):
   query = """
@@ -31,19 +36,14 @@ def game_setup():
   lines = open("data/possible_pairs.txt").read().splitlines()
   start,end,_ =random.choice(lines).split(",")
 
-  path = []
-  for row in fetch_shortest_path(start, end):
-    for item in row[0]:
-      path.append(item.properties['name'])
-
-  return path
-
+  return fetch_shortest_path(start, end)
 
 def play_the_game(path, num_turns):
   start_word = path[0]
   target_word = path[-1]
+  dist_to_target = len(path) - 1
 
-  print(f"You can get from {start_word} to {target_word} in {len(path) - 1} steps")
+  print(f"You can get from {start_word} to {target_word} in {dist_to_target} steps")
   guess_options = get_synonyms(start_word)
 
   turns_taken = 0
@@ -73,7 +73,8 @@ def play_the_game(path, num_turns):
         game_won = True
       else:
         taken_guesses.append(guess)
-        print(f"Guesses so far: {taken_guesses}. Try to get to {target_word}")
+        dist_to_target = len(fetch_shortest_path(guess, target_word)) - 1
+        print(f"Guesses so far: {taken_guesses}. Try to get to {target_word}. You are at least {dist_to_target} steps away")
         guess_options = get_synonyms(guess)
 
   if(game_won):
