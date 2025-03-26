@@ -25,26 +25,37 @@ Data collection is still in progress.
 Data can now be stored and queried using a Memgraph database. This is implemented
 using docker (currently).
 
-To start up the database server and the console:
+To start up the database server:
+
 ```
-docker run -p 7687:7687 -d --name memgraph memgraph/memgraph
+docker-compose up
+```
+
+This will start the database server and load the database snapshot. If you need
+to connect to the database to run queries or verify data, that can be done using
+mgconsole:
+
+```
 docker exec -it memgraph mgconsole
 ```
 
+Data was migrated into the database originally using the migration script:
+
+```
+python db/migrate.py
+```
+
+This isn't necessary to run if using the docker container, as the database is now
+loaded using the database snapshot stored in the `snapshots` directory. If the
+snapshot needs to be regenerated for any reason, this can be done by:
+
+- Starting up the memgraph container
+- Rerunning the migration script
+- Creating the snapshot: `docker exec -it memgraph mgconsole` and then `CREATE SNAPSHOT;`
+- Copy the snapshot out of the container and into the repo: `docker cp memgraph:/var/lib/memgraph/snapshot ./snapshots/snapshot`
+- Commit!
+
 To migrate data (insert it into the database), run the migration file:
 `python db/migrate.py`. This only needs to be run once (unless it changes).
-Maybe we need a Makefile.
-
-> [!NOTE]
-> The migration step is not super performant. It will take about 8 minutes or
-> so to insert all the data into the database. The command currently scrubs
-> the database at the start of the command so that it's using a fresh data set,
-> but because the command is idempotent (the MERGE command will not overwrite)
-> existing data.
-> Also note that memgraph only supports one database per machine so we may want
-> to ship the database inside of the container to keep it separate from any
-> local data. TBD! (We might also be able to get a DB dump and load from there
-> rather than inserting but not today, Satan.)
 
 To run sample queries against the database, execute `python sample_queries.py`.
-

@@ -80,7 +80,6 @@ began	prepare,lead,found,appear,start,undertake,emerge,occur,set,make,launch,ini
 role	function,act,use,hat,portfolio,performance,task,character,duty,involvement,office,place,purpose,activity,appearance,work,lieu,participation,aspect,job,part,position,business,post,capacity
 bones	die,specialist,professor,surgeon,expert,doctor,physician,body,frame,scientist,remains
 disappointed	unsuccessful,unhappy,upset,frustrated,defeated,disturbed,sad
-dallas	tx
 resale	marketing,merchandising
 rooms	cabins,accommodations,flat,suite,apartments,apartment,condo,bays,cells,chambers
 strains	tension,families,try,trouble,lines,burden,births,twist,injury,pressure,anxiety,stress,tear,origins,blood,stocks
@@ -195,7 +194,6 @@ apartments	efficiencies,condominiums,flats,studios,suites,condos
 ray	beam,shaft,radiation,light
 lots	loads,parcels,piles,scores,dozens,tons,plots,properties,patches
 cycles	wheels,patterns,runs,chains,loops,rounds,sequences,circles,developments,series
-plano	tx
 pipe	hose,leader,channel,sewer,tube,tubing,stem,vessel,bowl,pipeline,drain,vent,duct,conduit,transmit,piping,line
 juniper	cypress
 explains	illustrates,justify,illustrate,demonstrates,interpret,read,resolve,clarify,define,specifies,demonstrate,disclose,reveal,describe,analyze,analyzes,tell,defines,solve
@@ -225,7 +223,6 @@ lady	female,woman,girl,madam,madame
 hoped	expect,struggled,dreamed,tried,believe,assume,attempted,meant,hold,wished,intended,considered,allowed,designed,wish,looked,planned,aimed,anticipate,proposed,calculated
 segregation	structure,privacy,confinement,insulation,partition,isolation,discrimination
 boy	adolescent,male,toddler,juvenile,sonny,youth,kid,teenager,fellow,scout,lad,cub,guy,child
-houston	tx
 shareware	software,program,application,package
 disposable	available,liquid,fluid
 foliage	blade,vegetation,flora,leaf,leaflet,pitcher,scale,pad,green
@@ -372,7 +369,6 @@ pops	taps,reports,cracks,crashes
 regulated	checked,governed,kept,coordinated,contained,measured,constrained,organized,controlled,supervised,standardized,managed,held,monitored,ruled,stopped,suppressed
 ppp	operation,surgery
 historic	memorable,substantial,major,material,big,noteworthy,consequential,strategic,important,exceptional,outstanding,much,decisive,significant,famous,notable,meaningful,remarkable,extraordinary,distinguished,distinctive
-singing	karaoke
 fig	touch,pin,continental,ghost,darn,hint,beans,lick,figure,rap,little,ounce,bit,damn
 gis	brushes
 thousands	myriad,press,army,crowd,horde,sea,tons,trillion,flood,herd,overflow,lots,surplus,drove,flock,host,crush,mob,dozen,million,multitude,loads,score,legion,excess
@@ -753,7 +749,6 @@ otter	badger,sheep,hide,skin,fleece,beaver,seal,fisher,crocodile,fur,rabbit,leat
 reliable	devoted,faithful,tried,decent,honest,true,solid,stable,tested,decisive,dependable,safe,good,positive,strong,sure,responsible,fast,constant,secure,loyal,predictable,sincere,steady
 drying	baking
 electronics	physics,appliances,machines,devices,hardware,gadgets,technology
-celtic	gaelic
 ga	athens,augusta,albany,dixie,flint,south,us,america,usa,georgia,savannah,oxford,atlanta,macon
 army	battalion,militia,infantry,soldiers,service,host,mob,legion,squad,array,unit,artillery,command,company,ranks,corps,troops
 convex	expanded,puffy,spherical,enlarged,extended,risen,rounded
@@ -891,7 +886,6 @@ wall	threshold,hedge,obstacle,block,chain,attic,hall,side,door,header,surface,fi
 albanian	albania
 guided	led,regulated,engineered,showed,managed,negotiated,educated,accompanied,directed,trained,handled,supervised,taught,fulfilled
 jar	encounter,hit,crash,smash,knock,bump,slap,can,contact,vessel,basin,kick,mouth,bottle,punch,strike,collision,blow,shock,slam,pot,buffet,pounding,urn,lid,impact,vase
-mains	continents
 protections	shields,guards,walls,weapons,screens,wards,safeguards,defenses,securities
 auditory	heard,audible,acoustic
 databases	components,elements,constituents,facts,details,items,members,articles,ingredients,data,information
@@ -980,7 +974,6 @@ mitigation	moderation,release,ease,relief,comfort,decrease,reduction
 peace	friendship,order,harmony,calm,love,unity,reconciliation,accord,serenity,stability,concord,quiet
 instance	bit,humiliation,clip,occurrence,reason,detail,particular,example,sample,illustration,case,happening,piece,specimen,occasion,item,precedent,proof,time
 coupled	akin,communicating,involved,united,related,merged,accompanied,adjacent,contiguous,adjoining,married,connected,associated,linked,attended,attached
-scottish	scots
 digestion	realization,absorption,comprehension,awareness,uptake,appreciation,acquisition,conception,metabolism,hold,visualization,perception,understanding,grip,grasp
 anchor	secure,journalist,reporter,ground,correspondent,fix,attach,dock
 soft	fluffy,fat,yielding,low,comfortable,mild,creamy,quiet,gentle,silky,rounded,silent,simple,easy,smooth,plastic,flexible,bland,thin,dreamy,cool,lax,still,tender,elastic,soothing,padded,delicate,pastel,sweet,weak,dull,brushed
@@ -1152,7 +1145,6 @@ lighter	ferry,auxiliary,cruiser,canoe,kayak,boat,banker,taxi,launch,cutter,tende
 designers	founders,creators,authors,makers,builders,developers
 warriors	veterans,fighter,rangers,knights,recruits,soldiers,soldier,marines,raiders,hero,champion,fighters
 bali	indonesia
-harvard	cambridge
 herpes	aids
 treaties	settlements,alliances,deals,contracts,conventions
 bowman	mariner,salt,tar,navigator,expert,sailor,archer
@@ -1463,7 +1455,6 @@ conflicts	disagree,wars,dispute,struggle,competition,clash,disputes,friction,fig
 grab	net,fish,collar,catch,rap,cop,capture,bag,hook,hold,trap,stop,grasp,land,get,take,grip,seize,intercept,clutch,nail
 glide	slide,cruise,travel,stream,slip,spiral,surf,skip,float,skate,fly,breeze,race,rush,brush,snowboard,flow,speed,plane,move,soar,roll,snake,sail,drift,coast,go,sweep
 clicked	identified,related,bonded
-rio	brasil
 cinnamon	laurel
 lanes	passages,passes,drives,approaches,routes,walks,rows,paths,roads,trails,pike,avenues,tracks,arteries,ways,waterways,streets,airways,highways
 remodeling	change,redesign,amendment,adjustment,transformation,revision,modification,revise,alteration,variation,shift,difference
@@ -1610,7 +1601,7 @@ fortunate	promising,lucky,good,helpful,healthy,profitable,unexpected,favorable,w
 dungeons	prisons,tanks,keeps,coolers,holes,cages,cells,pens,wards
 curling	bending,winding,fuzzy,windy,curly,twisted,crooked,curved
 enormous	gigantic,super,huge,monster,large,substantial,oceanic,heroic,planetary,galactic,vast,giant,considerable,immense,titanic,bumper,excessive,big,astronomical,massive,mammoth,mighty,jumbo,grand,mega,tremendous,oversized,cosmic,great
-careers	practices,engagements,jobs,works,services,offices,postings,occupations,duties,gigs,trades,course,tasks,race,professions,missions
+careers	engagements,jobs,works,services,offices,postings,occupations,duties,gigs,trades,course,tasks,race,professions,missions
 emerged	show,rise,happened,appear,arose,came,develop,arrive,surface,occurred,appeared
 fragrance	aroma,smell,scent,balm,incense,odor,perfume,bouquet
 purchase	earn,investment,asset,select,acquire,buy,get,redeem,take,invest,acquisition,choose,subscribe,shop
@@ -2179,7 +2170,6 @@ framed	fabricated,built,constructed,created,organized,structured,fashioned,mount
 naturals	noodles,idiots,dummies,losers,nuts,fools,stocks
 contacting	getting,telephone,addressing,reach,reaching,phone,talk,telling,informing,calling,call,advising,approach,connect,visit
 blind	mindless,ignorant,unconscious,screen,curtain
-venezuela	valencia
 finals	championships,battles,athletics,nationals,races,struggles,conflicts,tournaments,sports
 profile	organization,silhouette,fashion,skeleton,biography,form,outline,chart,sketch,configuration,cast,study,contour,frame,analysis,format,design,figure,survey,pattern,geometry,framework,shell,shape,review,portrait,plan
 rocking	lively,happy,pleasant,enthusiastic,glad,stream,hilarious,flood,enjoyable,vigorous,swell,merry,surge,rash,mad,passionate,animated,jolly,robust,sunny,disturbance,movement,gala,tide,amusing,vibration,fiery,crest,outbreak,bold,energetic,sign,rush,bright,turbulence,shaking,agile,cheerful
@@ -2275,7 +2265,7 @@ commencement	genesis,initiation,threshold,launch,morning,dawn,onset,graduation,b
 federation	combine,association,establishment,combination,organisation,organization,union,bloc,partnership,group,axis,coalition,alliance,league,constitution
 harmless	healthy,innocent,naive,gentle,simple,mild,safe,benign,white,sound
 nonprofit	organization,unsuccessful,organisation
-rituals	fashions,tricks,habits,ways,customs,routines,practices,patterns
+rituals	fashions,tricks,habits,ways,customs,routines,patterns
 applies	refers,involves,relates,affects
 volume	quantity,pile,bundle,amount,mountain,bunch,lot,dozen,much,content,chunk,size,loads,myriad,yard,figure,abundance,deal,pot,capacity,mass,heap,sight,bucket,stack,measure,hundred,mess,pack,ton,total,wealth,barrel,plenty,store,peck,number
 toon	cartoon
@@ -2845,7 +2835,6 @@ croatian	croatia
 galway	ireland
 stealth	underground,covert,private,sneak,undercover,stealing,secret,hiding
 natural	genuine,raw,legitimate,regular,intrinsic,usual,proper,reasonable,constitutional,born,ordinary,elementary,elemental,simple,congenital,logical,real,easy,pure,chronic,essential,inherent,common,native
-bel	b
 accompanying	associated,resulting,simultaneous,subsequent,linked,concurrent,incidental,attending,related,attendant,following
 students	scholars,undergraduates,enrollment,recruitment,admission,pupils,readers,freshmen,turnout
 vanilla	neutral,pedestrian,flat,boring,orchid,dull,dry,beige
@@ -3339,7 +3328,6 @@ richer	delicious,elegant,bright,fat,wealthy,strong,tasty,lush,expensive,fertile,
 manila	fiber,cannabis,marijuana
 depot	warehouse,repository,terminal,storage,yard,garage,station,transit,store
 distinction	prestige,division,perfection,line,sensitivity,merit,reputation,judgment,quality,perception,consequence,discrimination,importance,contrast,excellence,difference,differentiation,characteristic,separation
-lava	aa
 collectible	relevant,invaluable,profitable,expensive,scarce,helpful,expected,ornamental,valued,beneficial,unpaid,commodity,asset,souvenir,ornament,rare,owed,scheduled,due,figurine,outstanding,costly,useful,payable,valuable,worthwhile,antique,important,treasure
 marathon	prolonged,lengthy,endless,task,project,far,undertaking,great,long,extended
 officers	man,board,personnel,management,officer,crew,force,committee,police,ministry,bureau,troops,detective,cabinet,department,inspectors,cops,organization,faculty,legislature,squad,team,presidency,staff,executive,investigators
@@ -3803,7 +3791,6 @@ closed	decided,sealed,exclusive,shut,locked,unavailable,settled,restricted,concl
 translator	interpreter,summarize
 vid	tape,cartridge,box,video,station,videotape,audio
 essence	stuff,root,heart,soul,content,kernel,element,quality,centre,character,reality,core,attribute,property,being,meat,sum,center,principle,nature,aspect,spirit,substance,basis,meaning,structure,marrow
-dominica	caribbean
 intrusion	entrance,interference,ignoring,breach,sin,offence,wrong,entering,offense,violation,intervention,infringement,invasion
 dvds	tapes,videos
 pleased	thrilled,encouraged,happy,content,cheerful,satisfied,delighted,glad,thankful
@@ -3850,7 +3837,6 @@ obscene	dirty,coarse,nasty,abusive,unwanted,outrageous,blue,unpleasant,filthy,fo
 shoulders	assumes,backs,competitor,player,professional,accepts,animal,sport,bears
 tunes	melodies,lyrics,songs,strains
 boring	weary,flat,sterile,dry,stupid,grey,dull,arid,blank,dusty,pedestrian,old,slow,annoying,blah,heavy
-entropy	s
 fl	gainesville,pensacola,kissimmee,key,melbourne,dixie,orlando,usa,tampa,south,florida,us,america,miami,jacksonville,tallahassee,sarasota
 aiming	concentrating,casting,try,mean,setting,design,focus,focusing,steering,propose,want,bending,direct,directing,training,holding,plan,target,heading,address,intend
 everest	tibet
@@ -4134,7 +4120,6 @@ incoming	elect,future,advent,coming,appearance,direction,next,inbound,designate,
 switched	shifted,dismissed,exchanged,substituted,traded,changed,replaced
 settlers	pioneers,pilgrim,explorers,immigrant
 err	stray,trip,mistake,nod,slip
-muhammad	mohammed
 astronomical	jumbo,bumper,considerable,cosmic,imposing,big,overwhelming,monster,immense,infinite,gigantic,oversized,grand,enormous,mighty,galactic,giant,extensive,heroic,oceanic,super,tremendous,mega,massive,titanic,huge,large,planetary,mammoth,vast
 pussycat	person,kitty,someone,individual,soul,somebody,cat,kitten
 bells	permission,calls,ratification,mandate,cries,license,confirmation,consent,support,recommendation,sanction,blessing,endorsement,shouts
@@ -4319,7 +4304,6 @@ sometimes	constantly,consistently,frequently,now,occasionally,periodically
 missiles	charges,rounds,shots,shells,bullets,balls,caps,cartridges,leads,loads
 ruling	sentence,decision,directive,law,declaration,holding,judgment,opinion,resolution,finding,rule,verdict,order,judgement,injunction
 gaze	look,peer,stare
-thai	tai
 injustice	wrong,misconduct,breach,malpractice,prejudice,abuse,inequality,violation,infringement,discrimination,oppression,crime
 fore	forward,front,frontal,anterior
 in	via,through,by,per,inward,with
@@ -4449,7 +4433,6 @@ canonical	evangelical,episcopal,sacred,holy,ministerial,clerical,pastoral,orthod
 lick	bust,wash,punch,slap,cream,box,rub,licking,shell,dab,crack,bop,bat,sock,bash,stroke,knock,slug,smash,beat,slam,knee,pick,pound,spank,plump,rap,chop,hand,bang,lam,clip,crush,kick,pounding,stripe,switch,cuff,hook,belt,hack,buffet,blow,hit
 yang	principle
 contributes	lead,advance,supply,support,provides,share,assist,commit,help,presents,strengthen,add,give,grant
-quebec	montreal
 socialist	pol,radical,progressive,liberal,politician,communist,red
 antitrust	just
 bread	bucks,tender,nan,cabbage,cracker,change,money,dough,coin,sandwich,toast,flour,roll,host,funds,chips,green,scratch,cash,gold,dollar,currency
@@ -4667,7 +4650,6 @@ starring	prima,major,stellar,star
 viper	cobra,python,serpent,boa,asp,snake
 reactive	keen,rooted,mechanical,precise,nervous,tense,blind,sympathetic,emotional,automatic,quick,tricky,susceptible,reflex,robotic,compassionate,conditioned,conscious,sensitive,spontaneous,responsive,active,unstable,mechanic,simple,unconscious,sudden,aware,sensible,delicate
 prepares	lays,fits,fixes,provides
-haiti	caribbean,haitian
 kick	beef,scream,cry,punch,keen,punt,worry,stop,move,blow,protest,boot,crab,snap,complain
 bracelet	bind,irons,band,jewellery,ornament,chain,jewelry,bond,collar,tie,confinement
 fate	consequence,future,occurrence,effect,inevitable,portion,fortune,destiny,circumstance,doom,issue,chance,outcome,karma,happening
@@ -4941,7 +4923,6 @@ destruction	elimination,loss,holocaust,kill,liquidation,massacre,ruin,conclusion
 believes	take,have,hold,buys,trusts,admit,think,feel,expect,regard,suppose,suspect,takes,conclude,understand,accept,consider,understands,assumes,accepts,maintain,trust,credits
 window	framework,bumper,building,rest,pane,gap,case,interim,pause,space,interruption,suspension,comma,interval,lag
 tailor	conform,condition,shape,alter,modify,adjust,adapt,fashion,accommodate,match,put,edit,customize,suit,fit,transform,prepare,doctor
-james	stuart
 assassination	homicide,terrorism,massacre,shooting,murder,execution,slaughter,hit,killing,destruction,felony,crime,genocide
 parity	unity,par,similarity,correlation,conservation,equivalence,equality,consistency
 purchases	take,asset,acquisition,gets,earn,takes,shop,buys,investment,redeem,acquire,invest
@@ -4955,7 +4936,6 @@ standards	goodness,ethics,prayer,church,theology,doctrine,norms,integrity,righte
 represent	illustrate,characterize,define,correspond,perform,identify,mirror,describe,indicate,suggest,equal,mean,show,character,display,produce,serve
 molecule	atom,patch,whisper,bite,drop,trace,lick,radical,fraction,chain,particle,portion,section,bit,grain,scrap,fragment,unit
 refrain	avoid,melody,burden,vocal,halt,music,theme,resist,chorus,response,cease,curb
-pear	bartlett
 reading	education,performance,browse,review,examination,version,language,knowledge,learning,translation,lesson,studying,account,study,interpretation,browsing,adaptation
 asleep	sleepy,sleeping,resting,unaware,unconscious
 db	element
@@ -5007,7 +4987,6 @@ stimulated	interested,charmed,engaged,excited,animated,absorbed
 creator	pioneer,divine,founder,generator,producer,lord,trinity,maker,originator,architect,designer,father,almighty,author,inventor
 prefer	favor,choose,put,like,pick,select,enjoy,promote,wish,opt,suggest,adopt,want
 obey	conform,surrender,embrace,adapt,accept,comply,execute,mind,observe,listen,follow
-pirates	raiders
 jingle	ring
 sustaining	rewarding,structural,maintenance,performing,good,satisfying,valuable,successful,extension,elementary,central,useful,delicious,lasting,continuity,vital,commercial,essential,elemental,tasty,keep,productive,radical,worthwhile,care,beneficial,chronic,sweet,encouraging,practical,major,durable,enduring,heavy,underlying,principal,effective,constitutional,conservation,theoretical,preservation,running,intrinsic,indispensable,integral,supply,necessary,preserving,spicy,creamy,significant,juicy,soothing,support,custody,refreshing,paramount,crucial
 occupied	populated,filled,working,engaged,active,employed,busy,settled
@@ -5850,7 +5829,7 @@ chopper	helicopter,hopper,chop
 utterly	absolutely,clean,completely,exactly,enough,quite,perfectly,entire,entirely,wide,fast,all,fully,flat,out,wholly,thoroughly,full,totally,dead,extremely,even,well,basically,altogether
 pest	bug,infection,plague,epidemic,virus
 coated	brushed,closed,backed,painted,polished,enclosed,decorated,hidden,capped,protected,wrapped,ground,covered,concealed,glazed,topped
-brazil	amazon,acre,brazilian,santos,para,rio,brasil,natal
+brazil	amazon,acre,brazilian,para,rio,brasil,natal
 mother	mummy,momma,ma,mom,parent,mommy,mum,mama
 cereal	barley,wheat,rice,corn,grain
 shots	burst,shooting,blast,artillery,discharges,firing,thunder
@@ -5872,7 +5851,6 @@ births	generations,bearings,reproductions
 janitorial	keeper,custodian,guardian
 package	crate,bundle,unit,packet,pouch,wrap,container,sack,carton,bottle,bag,can,tin,pack,lot,set,parcel,box
 brutal	rough,tough,stiff,heavy,hard,vicious,savage,rude,uncomfortable,fell,bitter,painful,trying,rugged,severe,unpleasant,grim,cruel,harsh
-queensland	brisbane
 vague	unsure,obscure,unclear,faint,lax,ambiguous,fuzzy,confusing,uncertain
 borrower	follow,utilize,recipient,embrace,incorporate,adopt,copy,receiver,use
 substantive	massive,great,major,essential,considerable,handsome,significant,existing,good,healthy,big,substantial,huge,real,actual,tremendous,tidy
@@ -5964,7 +5942,6 @@ checker	pattern,investigator,detective,controller,auditor,monitor,appraiser,stre
 repairs	conservation,care,preservation,supply
 glorious	massive,heroic,august,celebrated,beautiful,majestic,marvelous,impressive,splendid,great,epic,regal,remarkable,shining,memorable,delightful,gorgeous,grand,imperial,enjoyable,imposing,inspired,noble,awesome,famous,wonderful,royal,proud,tremendous,luxurious,bright,known,magnificent,divine,sublime,brilliant,superb
 halfway	half,fairly,middle,midway,part,partially,quite,central,pretty,relatively,partly
-practices	trials
 redevelopment	overhaul,improvement
 ebony	black,dark,brunette,raven
 designation	banner,description,name,title,handle,nickname,appointment,recognition,classification,surname
@@ -6074,7 +6051,6 @@ trips	travels,tours,rides,journeys,flights,expeditions,cruises,excursions
 botanical	prescription,lotion,capsule,remedy,injection,medication,cure,agricultural,tablet,pill,pharmaceutical,drug,specific,floral,cap,medicine,medicinal
 rockets	speeds,drives,bowls,flies,careers,jets,courses,shoots,races,bombs,bundles,runs,motors,jumps,barrels,darts,bolts,steps,travels,blows,rams,tears,belts
 payment	incentive,reimbursement,support,fee,royalty,deposit,sum,credit,salary,installment,reward,compensation,residual,remuneration,subscription,subsidy,return,refund,premium,cash,amount,penalty,satisfaction,wage,settlement,pension,benefit,paying,award,giving,cost,repayment,bonus
-spades	mines
 fly	circle,speed,fashionable,run,rush,go,move,smart,shoot,climb,cross,operate,pilot,flee,dart,boss,in,flight,race,glide,stylish,buzz,soar,pass,travel,trendy,sail,reach,float,coast,helicopter,wing,break,plane,withdraw,drift,disappear,swell
 continual	frequent,persistent,recurring,running,continuous,continuing,endless,enduring,repetitive,perpetual,recurrent,constant,repeated,perennial,continued,steady
 criticism	opinion,blast,critique,attack,comment,thrust,judgment,static,objection,review,assessment
@@ -6302,10 +6278,9 @@ democratic	autonomous,constitutional,elected,participatory,parliamentary,popular
 dit	dot
 xtc	adam,x,ecstasy,go
 tad	babe,lick,nip,minimum,trace,strain,peanuts,little,bit,splash,kid,bite,shade,child,toddler,streak,touch,handful,ray,hint,pinch,spark,smell,suspicion,dram,particle,dab,ounce,chick
-protocols	obligation,conventions,contract,code,custom,practices,forms,covenant,agreement,customs,pact,rules,manners
+protocols	obligation,conventions,contract,code,custom,forms,covenant,agreement,customs,pact,rules,manners
 dread	panic,awe,terror,dire,horror,trying,scary,shocking,horrible,terrible,fear,creepy
 predator	beast,animal,shark,kite,fauna,creature,user,wolf,vampire
-galveston	tx
 gap	interval,difference,break,void,breach,divide,opening,separation,gulf,cut,hole,disagreement,division,rent,crack
 mentally	interior,inner,psychological,cognitive,cerebral,internal,intellectual
 chain	continuum,nexus,progression,bracelet,cable,series,group,train,sequence,attach,string
@@ -6563,7 +6538,7 @@ grow	raise,build,crop,develop,age,culture,come,rise,expand,plant,advance,promote
 scenes	part,episode,picture,spot,culture,sight,show,location,arena,setting,act,sets,view,theater,routine,backgrounds,display,stage,incident,field,world,piece,site,landscape,set,scenery,place,settings
 estates	castles,halls,dwellings,villas,houses,homes
 transitional	conditional,intermediate,tentative,unpredictable,interim,alternate,shifting,limited,acting,proxy,unstable,volatile,varying,qualified,temporary,substitute
-behaviors	practice,bearings,performance,actions,manners,practices,conducts,attitudes,action,forms,characteristics,traits,act,presence,looks,management,addresses,styles,nature,role,conduct,attitude,habits,style
+behaviors	practice,bearings,performance,actions,manners,conducts,attitudes,action,forms,characteristics,traits,act,presence,looks,management,addresses,styles,nature,role,conduct,attitude,habits,style
 exhibitions	shows,exhibits,fairs,displays,productions,presentations
 expert	scout,star,consultant,craftsman,maven,proficient,investigator,ace,artist,sharp,scholar,guide,computer,talent,champion,skilled,hand,authority,mortal,archer,veteran,calculator,master,shooter,person,nerd,someone,shot,observer,trained,specialist,bowman,pathfinder,professional,wizard,analyst,superstar,individual,pro,shark,technician,therapist,guru,sensation,geek,enthusiast,maestro,experienced,soul,somebody
 generators	makers,founders,designers,creators,authors,pioneers,fathers
@@ -6640,7 +6615,6 @@ surge	climb,swell,rise,grow,growth,tsunami,flood,flow,wave,stream
 slip	tumble,sneak,slide,fall,dock,pier,anchorage,decline,steal,mistake,move,glide,creep,decrease,drop,trip,shrink,shift,error
 relaxation	diversion,play,leisure,amusement,entertainment,sport,relief,pleasure,mitigation,fun,enjoyment,recreation
 courses	road,development,progress,way,class,system,strategies,term,policy,time,subject,lecture,seminar,curriculum,interest,route,track,trail,policies,session,approaches,plan,direction,plans,method,meeting,procedure,conference,schedule,period,line,circuit,methods,preparation,procedures,series,programs,methodologies,program
-turin	torino
 curved	crooked,bending,curling,hooked,twisted,rounded,winding
 beaten	beat,dead,weary,drained,tired,whipped,exhausted,overwhelmed,spent,limp,done,routed,worn
 stamping	footprint,weaving,pattern,pounding,imprint,dragging
@@ -6731,7 +6705,6 @@ districts	precinct,locality,neighborhoods,section,department,region,community,se
 mustang	horse,charger,pony,mount,mare,black,bay,chestnut,colt
 unreal	weird,imaginary,dreamed,wild,fabricated,incredible,reality,foolish,fantastic,ridiculous,supernatural,bizarre,odd,peculiar,insane,legendary,unbelievable,artificial,absurd,pretend,strange,curious,fictional,crazy,fabulous,realism,false
 defence	defense,team
-colombia	colombian
 yummy	delicious,lush,delightful,juicy,spicy,tasty,heavenly,edible
 biz	business,undertaking,job,art,work,game,career,craft,accomplishment,role,activity,occupation,line,situation,pursuit,employment,specialty,field,trade
 proxy	deputy,rep,ambassador,factor,manager,representative,delegate,replacement,attorney,agent,spokesperson,minister,substitute
@@ -6841,7 +6814,6 @@ tiny	petite,mini,little,slight,small,wee,microscopic,minute,atomic,miniature,mid
 transformation	change,adjustment,modification,renewal,revolution,improvement,shift,alteration,conversion,advance,transition,strengthening
 carat	unit
 ithaca	greece
-geisha	japanese
 description	summary,confession,specification,illustration,rendering,variety,nature,characterization,type,sort,definition,character,version,portrait,spec,sketch,statement,story,detail,narrative,report,explanation,account,information,tale,picture
 reasonably	wisely,well,pretty,nicely,fairly,kindly,somewhat,moderately,honestly
 considering	since,as,for,now,seeing,whereas,because
@@ -7088,7 +7060,6 @@ establish	prove,formulate,form,initiate,build,open,install,make,institute,create
 distressed	anxious,upset,worried,disturbed,troubled,restless
 patagonia	argentina,chile
 basket	pocket,crate,bucket,sack,carrier,cooler,locker,trunk,cartridge,bowl,box,holder,container,bin,case,carton,bag
-jfk	kennedy
 invalid	challenged,sick,delicate,lame,weak,fading,null,fragile,dying,false,unreasonable,poorly
 bremen	germany
 wearing	painful,hostile,trying,strict,biting,rigorous,grinding,stringent,uncomfortable,overwhelming
@@ -7396,7 +7367,6 @@ xs	delete,cancel,erase,remove
 formerly	once,already,earlier
 approving	compatibility,tolerant,reconciliation,acceptable,suitable,compliance,favorable,good,helpful,desirable,healthy,responsive,positive,accepting,concession,mediation,accord,encouraging,satisfying,adjustment,lax,polite,decent,friendly,profitable,complimentary,respectful,appropriate,affirmative,accession,favourable,supportive,beneficial,understanding,proper,sympathetic,arrangement,compromise,convenient
 vigorous	vital,efficient,robust,mighty,athletic,active,strong,capable,tough,spirited,potent,healthy,powerful,dynamic,effective,lively,intense,energetic
-osteoporosis	pathology
 mantle	cape
 warner	predict,presenter,gossip,reporter,source,wake,caution,person,author,respondent,warner,alert,writer,somebody,correspondent,notify,comforter,mortal,soul,inform,advise,someone,individual,sender,transmitter
 subsidiary	option,adapter,additive,adaptor,appliance,complement,accessory,adjunct,ancillary,secondary,supplement,supplementary,attachment,supplemental,auxiliary
@@ -7689,7 +7659,6 @@ intensive	violent,intense,acute,accelerated,hard,comprehensive,profound,heavy,de
 calls	shouts,cries
 researcher	scientist,analyst,investigator,examiner,observer
 infection	flu,epidemic,virus,attack,sore,bug,pollution,disease
-previews	trials,practices
 apparatus	bureaucracy,machinery,means,structure,generator,separator,burner,purifier,equipment,telegraph,facilities,machine,mechanism,kit,network,copier,lighting,hierarchy,setup,stuff,gear,still,hardware,reactor,extractor,device,appliance
 canine	fox,wolf,dog,paw,puppy
 socket	hole,valley,basin,ditch,box,channel,impression,bag,bowl,hall,vacuum,bedroom,cave,crater,imprint,cell,pit,compartment,vacancy,well,groove,pocket,niche,excavation,apartment,opening,notch,hollow,cavity,room,position,sack,trench,recess,space
@@ -7718,7 +7687,6 @@ optimal	sterling,prime,terrific,top,splendid,fantastic,choice,maximum,capital,be
 runs	trips,races,speeds
 ascending	ascension,higher,mounting,up,climbing,elevated,growing,steep,climb,high,upward,soaring,rising,overhead,upper,raised,increasing
 dogs	hunters,puppies
-chickens	snakes
 signatures	trademark,stamp,seal,autograph,hands,name,autographs,identification,ink
 privilege	license,advantage,immunity,right,exemption,authority,honor,benefit,opportunity,freedom,allowance,due,authorization,entitlement,concession,vantage
 engraving	watercolor,illustration,pastel,charcoal,portrait,representation,image
@@ -8026,7 +7994,6 @@ trees	lumber,flora,woodland,timber
 informs	caution,tell,brief,sings,notify,advise,educate,warn,update,talks,instruct
 targeted	rid,rode
 navigational	nautical,maritime,marine,naval
-trials	crosses,fires
 rotation	curl,wheel,reel,circle,roll,curve,pivot,turn,move,motion,twist,circulation,winding,round,coil,movement,orbit,spin,spiral,turnout,revolution,circuit,wind
 realty	territory,terrain,tract,lot,parcel,region,home,land,farm,area,estate,holding,ownership,soil,continent,park,wealth,beach,acres,country,house,yard,earth,acreage,premises,goods,ranch,countryside,property,equity,field,plot,province,homeland,shore,worth,district,nation,campus,ground
 subtle	calculating,cute,slick,tricky,complex,sharp,covert,detailed,shady,sophisticated,slight,profound,precise,fraudulent,intriguing,designing,crooked,exquisite,slippery,indirect,faint
@@ -8131,7 +8098,7 @@ groove	treadmill,rebate,impression,routine,pattern,track,drill,grind,channel,hab
 teenager	kid,preteen,youth,toddler,rocker,child,chick,mod,minor,cub,teen,adolescent,juvenile,monkey
 brunch	fare,meal,picnic,taste,dessert,supper,breakfast,snack,lunch,dinner,feast,tea,luncheon,table
 optional	unnecessary,voluntary,elective,chosen,discretionary,alternative
-exercises	practices,drills,routines,lessons,assignments
+exercises	drills,routines,lessons,assignments
 hulk	tower,wreck,creep,snake,beast,natural,rise,lump,goose,dummy,heel,loser,idiot,hull,rogue,stupid,turkey,nut,hunk,skeleton,donkey,fool,lift,stock,lug,clown
 stout	durable,tough,tenacious,hardy,robust,rugged,sturdy,healthy,vigorous,hard,strong,muscular,heroic
 graphite	lead,c,carbon,pencil
@@ -9200,7 +9167,6 @@ gag	scream,rib,parody,nifty,humor,sally,wow,wit,funny,humour,riot,laugh,joke,tri
 pans	appearances,looks,faces,features,mugs
 antibiotics	prescriptions,medications,pharmaceuticals,physics,pills,injections,drugs,medicines,remedies,tablets,specifics
 writes	create,tell,authors,pen,note,record,sign,print,prints,types,address,compose,draft,records,rewrite,pens
-se	southeast
 sums	totals
 patch	lot,spot,dot,reinforce,tract,mole,stretch,point,marking,stain,repair,sew,plaque,plot,strip,land,bit,ground,chunk,rebuild,splash
 testified	witnessed,verified
@@ -9449,7 +9415,6 @@ playlist	listing
 industry	enterprise,business,commerce,persistence,application,production,aviation,market,energy,diligence,effort,attention,corporation,care,labor,activity,management,trade,concentration
 metropolis	town,city,suburb,municipality,downtown,capital
 australia	tasmania,canberra,australian,victoria,murray,queensland,aussie
-southeastern	southeast
 legend	lore,table,key,tradition,myth,story,scale,tale,caption,guide,folklore,mythology,fiction,fable
 locus	heart,seat,headquarters,core,nucleus,focus,venue,locale,axis,central,center,hub,playground,capital,nexus,base
 extensions	increase,development,delay,expansion
@@ -9617,7 +9582,6 @@ develops	grow,realize,acquire,start,establish,evolve,improve,advance,expand,prog
 felony	crime,breach,robbery,offense,seizure,stealing,misconduct,murder,debt,theft,error,offence,capture,sin,assault,violation
 authorisation	commissioning,sanction,authorization,certification,delegation,direction,commission,management,permit,license,empowerment,permission
 day	hour,tomorrow,today,morrow,afternoon,daytime,evening,eve,term,hr,yesterday,period,date,sunshine,time,noon,dark,daylight,night,morning
-muslim	islamic
 refers	involves,relates,applies
 lei	pot,vase,collar,garland,beads,crown,necklace,laurel,bouquet
 violate	fracture,breach,break,neglect,disregard,resist,abuse,ignore,oppose
@@ -9695,7 +9659,7 @@ macon	wine
 optionally	readily,alternatively,either,intentionally,instead,preferably,gladly,deliberately,freely
 headphone	phone,receiver,headset
 councillor	member,council
-directories	codes,fundamentals,guidelines,commandments,directions,laws,standards,guides,charges,values,practices,bylaws,regulations,restrictions,rules,ordinances,statutes,traditions,acts,commands,directives,instructions,regs,orders,principles
+directories	codes,fundamentals,guidelines,commandments,directions,laws,standards,guides,charges,values,bylaws,regulations,restrictions,rules,ordinances,statutes,traditions,acts,commands,directives,instructions,regs,orders,principles
 swallow	buy,consume,have,sip,down,bolt,drink,accept,chew,eat,lick,take,absorb
 camp	campground,settlement,tent
 pointers	indices,needles,gauges,hands,indexes,indicators
@@ -9752,7 +9716,6 @@ tango	samba,jive,trip,dance,bop,boogie,tread,shuffle,waltz,mambo,twist,disco
 garland	anthology,grace,symposium,ornament,compilation,reader,library,ana,corpus,almanac,album,digest
 please	transport,want,warm,excite,charm,wish,cheer,pleasure,glad,like,thrill,wow,entertain,delight,suit,satisfy,content,feast
 soups	clouds
-gu	guam
 beans	dash,power,ginger,zip,juice,sap,life,muscle,bread,drive,pep,vitality,go,gas,spirit,starch,fire,punch,snap,cabbage,lettuce,energy,bounce,strength,vinegar,passion
 england	northamptonshire,northumberland,devon,trent,liverpool,thames,kent,manchester,surrey,tyne,lancashire,britain,worcester,berkshire,brighton,somerset,gloucester,cornwall,cumbria,uk,portsmouth,leicester,birmingham,london,lakeland,leicestershire,reading,hampshire,sussex,cam,hull,cambridge,newcastle,essex,hertfordshire,gloucestershire,yorkshire,bristol,coventry,bath,lancaster,avon,oxford,blackpool,lincolnshire,europe
 health	healthy,agility,energy,fitness,welfare,sap,wellness,cleanliness,strength,hygiene
@@ -9809,7 +9772,6 @@ gothic	unusual
 pastel	dull,light,white,faint,grey,faded,gray,pale,neutral
 productive	creative,profitable,energetic,effective,useful,fertile,rich,successful,dynamic,rewarding,beneficial,worthwhile,constructive,valuable,causal,vigorous
 reverted	declined,returned
-aliases	surnames
 educational	informative,scholarly,informational,instructional,cultural,academic
 herald	announce,friend,apostle,champion,booster,promoter,supporter,tell,advocate
 betting	playing,venture,gambling,laying,stake,speculation,chance,pledge,offering,wagering,putting,odds,going,risk
@@ -9922,7 +9884,6 @@ summarizes	outlines,recap,outline,compile,briefs
 elephants	giants,titans,whales,monsters,dinosaurs
 demonstration	protest,exposure,exhibition,trial,parade,expression,rally,demo,testimony,gathering,show,strike,presentation,performance,test,march
 juicy	vivid,spicy,fascinating,intriguing,profitable,colorful
-graves	cemeteries
 recurrence	repetition,epidemic,increase,flare,burst,repeat,renewal,return,surge,frequency,outbreak
 facing	lining,mask,cuff,top,covering,front,cover,show,collar,appearance,face,surface,outside
 threaded	incorporated,combined,mixed,inserted
@@ -9982,7 +9943,6 @@ mixed	different,motley,assorted,diverse,cross,heterogeneous,hybrid,varied,miscel
 exhibitors	production,exhibition,show,expo,fair,display
 fishes	reaches,feels,looks
 worm	tease,induce,sneak,inch,drag,hide,creep,snake,crawl,slide,steal,glide,slip,ease
-atmospheric	meteorological
 homeowner	owner
 mounts	increases,expands,rises,jumps,gains,spreads,balloons,mushrooms
 prediction	indicator,reasoning,projection,guess,prophecy,forecast,predicting,forecasting,cast,anticipation,prognosis
@@ -10135,7 +10095,7 @@ enhance	reinforce,help,enlarge,compound,better,boost,complement,improve,amend,re
 samoa	as,polynesia
 pushing	pressing,driving,ambitious,boost,press,depression,pressure,propulsion,energetic,eager
 spirits	brandy,liquor,rum,wine,drink,beer,whiskey,gin,whisky,ale,alcohol,bottle,vodka,sauce,juice,sake
-customs	routines,duty,fashions,habits,rituals,practices,tariff,tricks,ways,patterns,styles,custom
+customs	routines,duty,fashions,habits,rituals,tariff,tricks,ways,patterns,styles,custom
 monetary	economic,financial,budgetary,fiscal
 grades	places,cuts,aspects,inches,steps,degrees,phases,stages,amounts,points,chapters
 cdc	bureau,authority,hhs,agency,atlanta,office
@@ -10307,7 +10267,6 @@ plots	strategies,designs,schemes
 botswana	africa
 earning	acquiring,drawing,carrying,securing,making,obtaining,getting,realizing,achieving,gaining,winning,capturing,landing
 rescued	reconditioned,saved,recovered,restored,released,retrieved,freed
-bahamas	caribbean,nassau
 hen	pigeon,layer,chicken,duck,goose
 express	offer,manifest,intimate,demonstrate,phrase,describe,explicit,convey,sound,publish,indicate,say,look,disclose,give,hint,show,tell,put,air,speak,announce,write,reveal,assert,voice,communicate,suggest,vent,submit,declare,raise,accent,menace,state,expressed
 metrics	measures,examples,norms,standards,rules,criteria,benchmarks,grades
@@ -10357,7 +10316,6 @@ determined	decisive,sure,bound,firm,serious,set,intent,confident,positive,out,re
 cops	investigators,officers,police
 unlocking	expressing,releasing
 old	primitive,former,senior,gray,sunset,older,past,elderly,yellow,tired,original,aging,antique,ageing,established,aged,used,rusty,age,traditional,ancient,mature,worn,familiar
-mt	ai
 inappropriate	irrelevant,unhappy,awkward,incorrect,inconsistent,improper,bad,unacceptable,unfortunate,wrong,naughty
 rolling	swelling,rolled
 penalties	cost,discipline,damages,fine,fines
@@ -11068,7 +11026,7 @@ rams	strikes,crashes,hits,impacts
 are	continue,breathe,exist,survive,ar,live,rule
 doors	portals,gates
 blood	folks,kin,family,people,stock,tribe,lineage,gore,dynasty,line,clan,humour,household,race,house,serum,humor
-drills	routines,practices,habits,patterns,techniques,methods
+drills	routines,habits,patterns,techniques,methods
 conditional	contingent,restrictive,provisional,dependent,qualified,limited,tentative
 replacement	cover,substitute,exchange,backup,substitution,reserve,displacement,sub,replacing,restoration,relief,assistant
 frontiers	borders
@@ -11149,7 +11107,6 @@ carolina	south,sc,nc
 normal	average,usual,whole,everyday,standard,reasonable,typical,natural,mean,common,traditional,expected,healthy,modal,sane,regular,familiar,routine,ordinary,customary,cool
 commons	mob,herd,multitude,millions,crowd,people,mass,public,class
 smells	trace,detect,aroma,breathe,perfume,scent,bouquet,flavor
-meantime	meanwhile
 educate	amend,train,lesson,prepare,school,inform,tutor,discipline,develop,better,teach,groom,instruct,improve,rear
 distant	extreme,apart,outlying,away,far,obscure,removed,cold,distance,remote,isolated,deep
 veterans	vets,experts,masters,professionals
@@ -11243,7 +11200,6 @@ repeating	redundancy,repetition,renewal,copying,continuation,iteration,replay,re
 manpower	personnel,pool,crew,shift,force,complement,help,hands,worker,gang,workforce,employee,staff
 flagstaff	mast,az,stick,rod,leg,beam
 authority	expert,consultant,dominance,jurisdiction,proficient,maestro,scholar,authorisation,rule,ace,wizard,command,master,maven,government,muscle,shark,force,specialist,sovereignty,geek,professional,artist,law,guru,control,hand,judge
-winnipeg	manitoba
 splendid	beautiful,royal,gorgeous,elegant,glorious,epic,massive,imposing,tremendous,bright,imperial,magnificent,sublime,exquisite,distinguished,remarkable,grand,outstanding,proud,noble,baroque,superb,fantastic,rich,impressive,majestic,regal,luxurious,great,brilliant,heroic,wonderful,exceptional,marvelous
 indicating	note,mention,symbolic,quotation,meaning,hint
 throwing	bowling,flip,pitching,lob,pitch,push,casting,fire,drive,force,lift,start,launching,put,send,deliver,firing,thrust
@@ -11308,7 +11264,6 @@ gray	white,faded,neutral,slate,sad,silver,pale,argentine,pewter,dusty,grey
 proposed	recommended,expected,planned,theoretical,prospective,conceptual,assumed,presumed,suggested,hypothetical,abstract,supposed,academic,scheduled,alleged
 succession	series,run,chain,row,string,range,rain,file,train,progression,sequence,cycle
 backgrounds	environment,training,scenes,environments,qualification,education,stages,backdrop,grounds,history,practice,tradition,culture
-charleston	wv
 grouping	system,mixture,association,batch,population,masses,package,community,bunch,man,block,halogen,series,variety,mass,humanity,subgroup,mankind,scheme,circuit,group,parcel,battery,suite,arrangement,aggregation,kingdom,cloud,people,clutch,cluster,race,abstraction,band,world,bank,accumulation,lot,array,edition,humans,assortment,multitude,set,collection
 highlighted	bright,advertised,illuminated,displayed,light,lit,lighted
 designs	configuration,ideas,make,motif,model,plans,prepare,games,style,arrange,drawing,projects,fashion,idea,project,programs,construct,recipes,portrait,perform,aim,scheme,systems,ways,create,compose,method,story,setup,painting,arrangements,picture,arrangement,device,shape,plan,describe,devices,draft,pattern,strategies,map,composition,schemes,produce,recipe,tailor,study,architecture,layout,propose,form,construction,proposals
@@ -11416,7 +11371,6 @@ care	attention,focus,diligence,concern,concentration,protection,responsibility,o
 occupational	calling,job,profession,game,duty,employment,line,work,trade
 conclusions	decisions,deductions,statistics,input,consequences,determinations,testimony,assumptions,goods,info,evidence,picture,knowledge
 influencing	lobbying,convincing
-portability	flexibility
 statutory	legal,permissible,constitutional,lawful,authorized,right,innocent,proper,allowable,regulation,just
 israeli	asian,zion,sion
 assistants	servants,administration,ministry,organization,aides,authority,team,crew,aids,helpers,government,employees,force,committee,faculty,personnel
@@ -11600,7 +11554,6 @@ beacon	lighthouse,flashlight,flare,lamp,lantern,radar,light,lighting,candle
 tsunami	tide,wave,roller,stream,surge,breaker,swell,torrent,disaster,flow,surf
 ladder	scope,scale,rate,spoke,level,stairs,hierarchy,proportion,extent,ratio,range,graduation,steps,sequence,ordering,series,system,ranking
 decides	agree,elect,chooses,vote,figures,choose,set,select,establish,determine,conclude,end,finds,determines,concludes,resolve,rule
-bladder	sac
 hiking	walking,trekking,wandering,roaming,hike,walk
 indispensable	imperative,crucial,needed,important,required,requisite,essential,integral,critical,fundamental,vital,basic,necessary
 aftermath	consequence,wages,outcome,implication,product,fate,termination,result,child,conclusion,sequence,train,sequel,reward,effect,fruit,development,impact,issue
@@ -11640,10 +11593,9 @@ unavailable	removed,far,hidden,accessibility,isolated
 retailers	dealers,resellers,merchants,wholesalers,vendors,traders,sellers,exporters,distributors
 thumb	reach,rub,hold,hit,feel,thumbnail,try,check,pat,test,lick,perceive,hitch,brush,address,sense,kiss,finger,greet,shape,examine,tap,claw,employ,stroke,handle,strike,advise
 zoning	partitioning,partition,segmentation,division
-digital	pc
 garden	orchard,terrace,grove,patio,field,hall,bed,landscaping,plot,nursery,patch,theater,ballroom,theatre,greenhouse,arena,playhouse,plantation,auditorium
 example	pattern,instance,sample,lesson,case,indication,specimen,part,illustration,representative,prototype,symbol,object,precedent
-routines	practices,techniques,traditions,habits,approaches,programs,procedures,plans,patterns,customs,drills,methods,strategies
+routines  techniques,traditions,habits,approaches,programs,procedures,plans,patterns,customs,drills,methods,strategies
 support	backing,sustain,promote,prop,hold,protection,stay,responsibility,help,finance,loyalty,pillar,boost,foundation,payment,encouragement,approve,mounting,encourage,stand,relief,maintain,continue,abide,fund,sponsor,assist,spur,tolerate,aid,back,bear,column,establish,reinforce,bracket,carry,mount,pole,raise,care,assistance,justify,shore,arch,strengthen,reinforcement,take,brace,subsidy,endorse
 veto	injunction,reject,refuse,vote,ballot,ban,deny,warning,restriction,denial,objection,prohibition
 dba	name
@@ -11724,10 +11676,9 @@ named	specified,known
 revolt	conflict,rebellion,battle,outbreak,revolution,rising
 hurley	row,storm,hurricane,hurry,clutter,stew,noise,disturbance,coil,bother,zoo,stir,fun
 harm	impairment,bleeding,strain,twist,burn,insult,injury,inconvenience,wreck,fracture,violence,abuse,pull,sting,sap,misuse,bump,wrong,loss,mar,undermine,bite,damage,ruin,prejudice,hurt,pinch,wound,break,trauma,wrench,shock
-ceremonies	practices,show,traditions,service,forms,function,rituals,celebrations,rite,parade
+ceremonies	show,traditions,service,forms,function,rituals,celebrations,rite,parade
 numbers	betting,order,code,decree,drawing,multiplication,algebra,horde,myriad,fiscal,statute,law,calculus,calculation,lottery,principle,procedure,computation,arithmetic,legion,mathematics,estimation,figures,economic,monetary,math,commercial,geometry
 telescope	curl,compact,wrap,compress,summarize,knit,consolidate,crush,simplify,pack,contract,bend,restrict,capsule,shrink,tuck,collapse,squeeze
-beatles	starr,lennon,mccartney
 cables	ropes,lines,wires,strings,cords
 yea	nay,undoubtedly,certainly,truly,positively,really,even,definitely,indeed,surely
 majestic	noble,elegant,heroic,glorious,quiet,handsome,rich,exquisite,superb,stylish,simple,graceful,fine,sophisticated,refined,classy,grand,splendid,regal,imposing,magnificent,royal,luxurious,proud
@@ -12057,7 +12008,6 @@ eclectic	messy,heterogeneous,miscellaneous,broad,assorted,diverse,chaotic,varied
 pentagon	bureaucracy
 ping	strike,crash,jingle,crunch,hit,ring,tang,clash
 joe	caffeine,cat,man,jack,buck,chap,lad,male,fellow,dude,gentleman,espresso,guy
-bryan	tx
 haven	anchorage,sanctuary,roads,lagoon,marina,harbor,port,shelter,asylum,retreat,oasis,bay,dock,cove
 impress	stamp,hit,experience,surprise,pierce,thrill,print,prompt,jar,stir,move,impression,excite,touch,affect,feel,imprint,trouble,infect,mark,cloud,inspire,motivate,strike,awe,upset
 greenwood	woodland,timberland,forest,stand,grove,timber,brake
@@ -12111,7 +12061,6 @@ wyoming	usa,us,jackson,wy,green,cheyenne,casper,america,snake,yellowstone
 pitbull	shark,fighter,tiger
 photographer	artist,shooter
 nicely	correctly,accurately,well,wonderfully,great,finely,beautifully,perfectly,happily
-brazilian	brasil
 pimp	offender,cadet
 phs	authority,agency,hhs,office,bureau
 drowning	flooding,overwhelming,flushing,overcoming
@@ -12923,7 +12872,6 @@ lean	nod,list,slim,prop,tilt,sparse,twist,tend,angle,tip,pitch,cant,flex,angular
 peacock	olive
 suburb	community,metropolis,countryside,village,fringe,municipality,city,addition,outpost,town
 assemble	collect,tack,piece,form,compile,collaborate,consolidate,gather,erect,cooperate,concentrate,compound,fit,merge,configure,cluster,construct,make,join,manufacture,produce,create,meet
-winchester	hampshire
 publishes	reprints,issues,produces,contributes,prints
 gathering	party,mobilization,concentration,association,panel,symposium,group,mass,conference,convention,collection,assembly,caucus,audience,congregation,meeting,crowd,function
 valuation	calculation,estimation,measurement,pricing,grade,examination,evaluation,rating,score,appraisal,assessment,computation,cost,mark,estimate
@@ -14171,7 +14119,6 @@ exhibitor	fair,expo,model,shower,pilot,production,promoter,show,mentor,teacher,e
 serum	lotion,specific,injection,pharmaceutical,prescription,medicine,humor,capsule,medication,blood,remedy,botanical,humour,cure,medicinal,drug,antibiotic
 mop	absorb,clean,sweep,wash,towel,dust,wipe,comb,brush,sponge,draw,rinse,shampoo,vacuum,scrub,dab
 broadcasts	advertisements,announcements,posters,notices,notifications,communications,messages,adverts,handouts,signs,bulletins,flyers,commercials,ads,brochures,releases,postings
-mit	cambridge
 beg	petition,ask,invoke,sue,request,pray,hustle,insist,require,urge,bite
 adapters	attachments,appliances,options,accessories
 prerequisite	condition,essential,obligation,requisite,must,necessity,necessary,qualification,duty,requirement,responsibility
@@ -14339,7 +14286,7 @@ largo	composition,passage,piece,opus
 rogue	shady,sharp,fraudulent,fast,false,crooked,bent
 jack	dollar,coin,change,tender,funds,green,money,gold,bucks,chips,dough,currency,bread,cabbage,cash,scratch
 goes	take,make,break,comes,come,fly,continue,lead,proceed,run,pass,work,does,move,leave,like,set,drop,happen,advances,fail,develop,retire,serve,allow,spend,fares,give,progress,finish,range,proceeds,flee,score,stand,turn,extend,travel,reach
-habits	patterns,routines,nature,customs,morality,fashions,styles,spirit,presence,practices,ways,action,management,attitude,style,act,rituals,performance,modes,manners,role,tricks,conduct,practice,integrity,correctness,dignity,ideology
+habits	patterns,routines,nature,customs,morality,fashions,styles,spirit,presence,ways,action,management,attitude,style,act,rituals,performance,modes,manners,role,tricks,conduct,practice,integrity,correctness,dignity,ideology
 piston	motor,instrument,appliance,cylinder,turbine,tool,transformer,generator,diesel,weapon
 hon	boyfriend,boy,dear,sweet,girlfriend,flame,beloved,lover,love,girl,sweetheart,husband,darling,squeeze,mistress,honey,wife
 vail	valley,dale,glen,hollow,canyon,gorge
@@ -14690,7 +14637,6 @@ persistent	steady,patient,perpetual,tenacious,determined,repeated,faithful,devot
 superintendent	supervisor,president,chief,controller,custodian,inspector,director,commissioner,officer,exec,manager,executive,administrator
 crises	emergency,possibilities,crossroads,trouble,heads,emergencies,dilemma,mess,situation,change,pressure,crunch,disaster,milestones,confrontation,situations
 academies	schools
-santos	brasil
 eligible	likely,veteran,trained,prepared,acceptable,qualified,able,fit,competent,capable,worthy,skilled,desirable,entitled,ready,expert,suitable
 limp	yielding,hop,loose,relaxed,soft,floppy,shuffle
 total	stark,absolute,damned,comprehensive,yield,perpetual,damn,all,thorough,profound,result,sheer,real,full,pure,reach,budget,equal,definite,utter,overall,unrestricted,comprise,entire,blank,huge,crashing,genuine,fair,sum,outright,endless,constant,flat,dead,very,unlimited,add,simple,amount,eternal,clean,deadly,complete,perfect,regular,rank

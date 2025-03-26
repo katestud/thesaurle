@@ -1,45 +1,49 @@
 import random
-import dictionary
+import mgclient
 
-SYNONYMS = dictionary.build_dictionary()
+conn = mgclient.connect(host="127.0.0.1", port=7687)
+cursor = conn.cursor()
 
-def get_synonyms(word):
-  if word in SYNONYMS:
-    return SYNONYMS[word]
-  return []
-
-def game_setup(length):
-
-  path_success = False
-
-  while not path_success:
-
-    current = random.choice(list(SYNONYMS.keys()))
-    path = [current]
-
-    seen_words = set([current])
-
-    for _ in range(length):
-      synonyms = get_synonyms(current)
-
-      possible_choices = list(set(synonyms).difference(seen_words))
-      if len(possible_choices) == 0:
-        path_success = False
-        break
-      current = random.choice(possible_choices)
-
-      seen_words.update(synonyms)
-      path.append(current)
-    path_success = True
+def fetch_shortest_path(start, end, max_hops=10):
+  query = f"""
+  MATCH path=(n:Word {{name: $start_word}})-[relationships:SYNONYM *BFS ..{max_hops}]->(m:Word {{name: $end_word}})
+  RETURN nodes(path);
+  """
+  cursor.execute(query, {'start_word': start, 'end_word': end})
+  path = []
+  for row in cursor.fetchall():
+    for item in row[0]:
+      path.append(item.properties['name'])
 
   return path
 
+def get_synonyms(word):
+  query = """
+  MATCH (a:Word {name: $word})-[r:SYNONYM]->(b:Word)
+  RETURN b
+  """
+  cursor.execute(query, {"word": word})
+  results = cursor.fetchall()
+
+  syns = []
+  for row in results:
+      name = row[0].properties['name']
+      syns.append(name)
+
+  return syns
+
+def game_setup():
+  lines = open("data/possible_pairs.txt").read().splitlines()
+  start,end,_ =random.choice(lines).split(",")
+
+  return fetch_shortest_path(start, end)
 
 def play_the_game(path, num_turns):
   start_word = path[0]
   target_word = path[-1]
+  dist_to_target = len(path) - 1
 
-  print(f"You can get from {start_word} to {target_word} in {num_turns} steps")
+  print(f"You can get from {start_word} to {target_word} in {dist_to_target} steps")
   guess_options = get_synonyms(start_word)
 
   turns_taken = 0
@@ -69,20 +73,19 @@ def play_the_game(path, num_turns):
         game_won = True
       else:
         taken_guesses.append(guess)
-        print(f"Guesses so far: {taken_guesses}. Try to get to {target_word}")
+        dist_to_target = len(fetch_shortest_path(guess, target_word)) - 1
+        print(f"Guesses so far: {taken_guesses}. Try to get to {target_word}. You are at least {dist_to_target} steps away")
         guess_options = get_synonyms(guess)
 
   if(game_won):
     print("🎉🎉🎉 Hooray 🎉🎉🎉!")
 
-num_turns = 5
 print("Initializing game play!")
-path = game_setup(num_turns)
+path = game_setup()
 print("Secret path")
 print(path)
 
-play_the_game(path, num_turns)
+play_the_game(path, 5)
 
-# number of turns
-# better relationship bw numturns and path length
-
+# Close connection
+conn.close()

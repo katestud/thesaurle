@@ -1,0 +1,22 @@
+version: "3.8"
+
+services:
+  memgraph:
+    image: memgraph/memgraph:latest
+    container_name: memgraph
+    restart: unless-stopped
+    ports:
+      - "7687:7687" # Neo4j Bolt Protocol
+      - "7444:7444" # HTTPS WebSocket for Memgraph Lab
+      - "3000:3000" # Optional: Memgraph Lab UI
+    volumes:
+      - ./docker-entrypoint.sh:/docker-entrypoint.sh
+      - ./snapshots/snapshot:/usr/lib/memgraph/snapshot
+      - mg_lib:/var/lib/memgraph
+      - mg_log:/var/log/memgraph
+    entrypoint: ["/docker-entrypoint.sh"]
+    command: ["memgraph"]
+
+volumes:
+  mg_lib:
+  mg_log:
