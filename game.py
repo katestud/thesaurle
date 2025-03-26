@@ -1,6 +1,8 @@
 import random
 import mgclient
 
+GUESS_OPTION_COUNT = 8
+
 conn = mgclient.connect(host="127.0.0.1", port=7687)
 cursor = conn.cursor()
 
@@ -14,6 +16,9 @@ def fetch_shortest_path(start, end, max_hops=10):
   for row in cursor.fetchall():
     for item in row[0]:
       path.append(item.properties['name'])
+
+  if len(path) == 0:
+    return None
 
   return path
 
@@ -38,13 +43,27 @@ def game_setup():
 
   return fetch_shortest_path(start, end)
 
+def sampled_guesses(guesses, target_word, num_samples):
+  print(f"Guesses: {guesses}")
+  random.shuffle(guesses)
+  sampled_guesses = guesses[:(num_samples - 1)]
+  remaining = list(set(guesses) - set(sampled_guesses))
+  for guess in remaining:
+    path = fetch_shortest_path(guess, target_word)
+    if path:
+      sampled_guesses.append(guess)
+      break
+
+  return sampled_guesses
+
+
 def play_the_game(path, num_turns):
   start_word = path[0]
   target_word = path[-1]
   dist_to_target = len(path) - 1
 
   print(f"You can get from {start_word} to {target_word} in {dist_to_target} steps")
-  guess_options = get_synonyms(start_word)
+  guess_options = sampled_guesses(get_synonyms(start_word), target_word, GUESS_OPTION_COUNT)
 
   turns_taken = 0
   game_won = False
@@ -73,9 +92,14 @@ def play_the_game(path, num_turns):
         game_won = True
       else:
         taken_guesses.append(guess)
-        dist_to_target = len(fetch_shortest_path(guess, target_word)) - 1
+        shortest_path = fetch_shortest_path(guess, target_word)
+        if not shortest_path:
+          print(f"Sorry, {guess} is a dead end. Try again")
+          continue
+        dist_to_target = len(shortest_path) - 1
         print(f"Guesses so far: {taken_guesses}. Try to get to {target_word}. You are at least {dist_to_target} steps away")
-        guess_options = get_synonyms(guess)
+        guess_options = sampled_guesses(get_synonyms(guess), target_word, GUESS_OPTION_COUNT)
+
 
   if(game_won):
     print("🎉🎉🎉 Hooray 🎉🎉🎉!")
