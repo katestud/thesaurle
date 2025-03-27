@@ -3,18 +3,19 @@ from textual.message import Message
 from textual.widget import Widget
 from textual.widgets import Footer, Header, SelectionList, Label, Static, Pretty
 from textual.widgets.selection_list import Selection
+from app_game import Game
 
 
 class PathTakenList(Static):
     """A widget to display the path of the thesaurus."""
 
     def compose(self) -> ComposeResult:
-        yield Label("Word 1", classes="far-guess path-taken-item start-word")
-        yield Label("Word 2", classes="far-guess light-10 path-taken-item")
+        yield Label(self.app.start_word, classes="far-guess light-10 path-taken-item start-word")
+        yield Label("Word 2", classes="light-10 path-taken-item")
         yield Label("Word 3", classes="path-taken-item")
         yield Label("Word 4", classes="path-taken-item")
         yield Label("Word 5", classes="path-taken-item")
-        yield Label("Word 6", classes="near-guess path-taken-item")
+        yield Label(self.app.target_word, classes="path-taken-item")
 
 
 class GuessHighlightedMessage(Message):
@@ -29,7 +30,7 @@ class GuessOptionsComponent(Widget):
     """A custom widget that contains a SelectionList of Options."""
 
     def compose(self) -> ComposeResult:
-        words = ["Word 1", "Word 2"]
+        words = self.app.game.available_guesses()
         self.selection_list = SelectionList[str](
             *[Selection(word, word) for word in words]
         )
@@ -69,13 +70,20 @@ class ThesaurleApp(App):
 
     def on_guess_highlighted_message(self, message: GuessHighlightedMessage) -> None:
         """Update the label when receiving a selection highlight event."""
-        self.next_synonyms.update([message.selection])
+        print(f"heyyyyyy {message.selection}")
+        options = self.game.get_synonyms(message.selection)
+        self.next_synonyms.update(options)
+        print(options)
 
     def compose(self) -> ComposeResult:
         """Create child widgets for the app."""
         self.path_taken = PathTakenList()
         self.guess_options = GuessOptionsComponent()
         self.next_synonyms = NextSynonyms()
+
+        self.game = Game()
+        self.start_word = self.game.start_word
+        self.target_word = self.game.target_word
 
         # Set border titles
         self.guess_options.border_title = "Make a word selection"
