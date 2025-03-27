@@ -13,11 +13,16 @@ class PathTakenList(Static):
         super().__init__()
         # Initialize path as a list of tuples, e.g., [(word, dist)]
         # Correctly structured as a list of tuples
-        self.path = [(self.app.game.start_word, self.app.game.initial_path_length)]
+        self.path = [(self.app.game.start_word,
+                      self.app.game.initial_path_length)]
 
     def compose(self) -> ComposeResult:
-        for word, dist in self.path:
-            # Display the word and distance
+        for index, (word, dist) in enumerate(self.path):
+            # TODO: Figure how to DRY this up
+            if index == 0:
+                word = f"[b]{word}[/b]"
+            elif index == len(self.path) - 1:
+                word = f"{word} *"
             yield self.label(word, dist)
 
     def update(self, new_path: list[tuple[str, int]]) -> None:
@@ -28,33 +33,37 @@ class PathTakenList(Static):
         for child in list(self.query(Label)):
             child.remove()
 
-        for word, dist in self.path:
+        for index, (word, dist) in enumerate(self.path):
+            if index == 0:
+                word = f"[b]{word}[/b]"
+            elif index == len(self.path) - 1:
+                word = f"{word} *"
             self.mount(self.label(word, dist))
 
     def label(self, word, dist):
-      extra_class = ""
-      if dist >= 10:
-        extra_class += "far-guess"
-      elif dist == 9:
-        extra_class += "far-guess light-10"
-      elif dist == 8:
-        extra_class += "far-guess light-20"
-      elif dist == 7:
-        extra_class += "far-guess light-30"
-      elif dist == 6:
-        extra_class += "far-guess light-40"
-      elif dist == 5:
-        extra_class += "far-guess light-50"
-      elif dist == 4:
-        extra_class += "near-guess light-40"
-      elif dist == 3:
-        extra_class += "near-guess light-30"
-      elif dist == 2:
-        extra_class += "near-guess light-20"
-      elif dist == 1:
-        extra_class += "near-guess light-10"
+        extra_class = ""
+        if dist >= 10:
+            extra_class += "far-guess"
+        elif dist == 9:
+            extra_class += "far-guess light-10"
+        elif dist == 8:
+            extra_class += "far-guess light-20"
+        elif dist == 7:
+            extra_class += "far-guess light-30"
+        elif dist == 6:
+            extra_class += "far-guess light-40"
+        elif dist == 5:
+            extra_class += "far-guess light-50"
+        elif dist == 4:
+            extra_class += "near-guess light-40"
+        elif dist == 3:
+            extra_class += "near-guess light-30"
+        elif dist == 2:
+            extra_class += "near-guess light-20"
+        elif dist == 1:
+            extra_class += "near-guess light-10"
 
-      return Label(f"{word} {dist}", classes=(f"near-guess path-taken-item {extra_class}"))
+        return Label(f"{word} {dist}", classes=(f"near-guess path-taken-item {extra_class}"))
 
 
 class GuessHighlightedMessage(Message):
@@ -136,7 +145,8 @@ class ThesaurleApp(App):
         # this is the core event
         # we need to take a turn but then fire other events
         self.game.receive_guess(message.selection)
-        self.path_taken.update([(guess, distance) for guess, distance in self.game.taken_guesses])
+        self.path_taken.update([(guess, distance)
+                               for guess, distance in self.game.taken_guesses])
         self.guess_options.update()
 
     def compose(self) -> ComposeResult:
