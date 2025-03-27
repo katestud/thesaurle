@@ -1,0 +1,87 @@
+Screen {
+  layout: horizontal;
+}
+
+ListView {
+  height: 100%;
+}
+
+PathTakenList {
+  width: 2fr;
+  height: 100%;
+  border: solid $panel;
+}
+
+GuessOptionsComponent {
+  width: 4fr;
+  height: 100%;
+  border: solid $accent;
+}
+
+NextSynonyms {
+  width: 6fr;
+  border: solid $panel;
+}
+
+.path-taken-item {
+  width: 100%;
+  color: $text-muted;
+}
+
+.near-guess {
+  background: $success;
+}
+
+.mid-guess {
+  background: $warning;
+}
+
+.far-guess {
+  background: $error;
+}
+
+.light-10 {
+  background-tint: white 10%;
+}
+
+.light-20 {
+  background-tint: white 20%;
+}
+
+.light-30 {
+  background-tint: white 30%;
+}
+
+.light-40 {
+  background-tint: white 40%;
+}
+
+.light-50 {
+  background-tint: white 50%;
+}
+
+.start-word {
+  text-style: bold;
+}
+
+#start-container {
+    width: 100%;
+    height: 100%;
+    align: center middle;
+}
+
+#start-content {
+    width: auto;
+    height: auto;
+    align: center middle;
+    layout: vertical;
+}
+
+.title {
+    text-align: center;
+}
+
+#start-button {
+    margin-top: 1;
+    width: auto;
+}

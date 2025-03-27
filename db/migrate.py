@@ -1,12 +1,20 @@
 import mgclient
-import sys
-import os
 import time
+import csv
 
-# WTF is this shit, how do python imports work!?
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+DICTIONARY_FILE = "data/synonyms.tsv"
 
-from dictionary import build_dictionary
+def read_dictionary_tsv(filename):
+    synonym_dict = dict()
+    with open(filename, mode='r') as file:
+        reader = csv.reader(file, delimiter='\t')
+        for row in reader:
+           if len(row) > 1:
+            key = row[0]
+            synonym_dict[key] = row[1].split(',')
+    return synonym_dict
+
+synonyms = read_dictionary_tsv(DICTIONARY_FILE)
 
 # Connect to Memgraph
 conn = mgclient.connect(host="127.0.0.1", port=7687)
@@ -16,7 +24,6 @@ cursor = conn.cursor()
 cursor.execute("MATCH (n) DETACH DELETE n")
 conn.commit()
 
-synonyms = build_dictionary()
 
 # Prepare data for bulk insert
 nodes = [{"name": word} for word in synonyms.keys()]

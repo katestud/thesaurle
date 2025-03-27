@@ -1,91 +1,77 @@
 import random
 import mgclient
 
-conn = mgclient.connect(host="127.0.0.1", port=7687)
-cursor = conn.cursor()
 
-def fetch_shortest_path(start, end, max_hops=10):
-  query = f"""
+class Game:
+    def __init__(self):
+        self.dbconn = mgclient.connect(host="127.0.0.1", port=7687)
+        self.dbcursor = self.dbconn.cursor()
+
+        lines = open("data/possible_pairs.txt").read().splitlines()
+        start, end, _ = random.choice(lines).split(",")
+        # HARD CODING FOR THE DEMO SO IT'S EASIER
+        start = "similarly"
+        end = "alien"
+
+        direct_path = self.fetch_shortest_path(start, end)
+        print(direct_path)
+
+        self.initial_path = direct_path
+        self.initial_path_length = len(direct_path) - 1
+        self.turns_taken = 0
+        self.game_won = False
+        self.taken_guesses = [(start, len(direct_path) - 1)]
+        self.start_word = start
+        self.target_word = end
+        self.current_word = start
+        self.dist_to_target = 0
+        self.guess_options = []
+
+    def fetch_shortest_path(self, start, end, max_hops=10):
+        query = f"""
   MATCH path=(n:Word {{name: $start_word}})-[relationships:SYNONYM *BFS ..{max_hops}]->(m:Word {{name: $end_word}})
   RETURN nodes(path);
   """
-  cursor.execute(query, {'start_word': start, 'end_word': end})
-  path = []
-  for row in cursor.fetchall():
-    for item in row[0]:
-      path.append(item.properties['name'])
+        self.dbcursor.execute(query, {'start_word': start, 'end_word': end})
+        path = []
+        for row in self.dbcursor.fetchall():
+            for item in row[0]:
+                path.append(item.properties['name'])
 
-  return path
+        return path
 
-def get_synonyms(word):
-  query = """
+    def get_synonyms(self, word):
+        query = """
   MATCH (a:Word {name: $word})-[r:SYNONYM]->(b:Word)
   RETURN b
   """
-  cursor.execute(query, {"word": word})
-  results = cursor.fetchall()
+        self.dbcursor.execute(query, {"word": word})
+        results = self.dbcursor.fetchall()
 
-  syns = []
-  for row in results:
-      name = row[0].properties['name']
-      syns.append(name)
+        syns = []
+        for row in results:
+            name = row[0].properties['name']
+            syns.append(name)
 
-  return syns
+        return syns
 
-def game_setup():
-  lines = open("data/possible_pairs.txt").read().splitlines()
-  start,end,_ =random.choice(lines).split(",")
+    def available_guesses(self):
+        possible_guesses = self.get_synonyms(self.current_word)
+        taken, _ = zip(*self.taken_guesses)
+        self.current_guesses = list(set(possible_guesses) - set(taken))
 
-  return fetch_shortest_path(start, end)
+        return self.current_guesses
 
-def play_the_game(path, num_turns):
-  start_word = path[0]
-  target_word = path[-1]
-  dist_to_target = len(path) - 1
-
-  print(f"You can get from {start_word} to {target_word} in {dist_to_target} steps")
-  guess_options = get_synonyms(start_word)
-
-  turns_taken = 0
-  game_won = False
-  taken_guesses = []
-
-  factor = 2
-
-  while not game_won and turns_taken < factor * num_turns:
-    turns_taken = turns_taken + 1
-    for index, o in enumerate(guess_options):
-      print(f"{index}: {o}")
-
-    try:
-      guess_index = input("enter your guess: ")
-      # TODO: Validate the input
-      guess = guess_options[int(guess_index)]
-      print(f"You chose: {guess}")
-    except KeyboardInterrupt:
-      print("quitting game")
-      break
-
-    if not (guess in guess_options):
-      print("not a valid guess")
-    else:
-      if guess == target_word:
-        game_won = True
+    def send_guess(self, guess):
+      self.turns_taken += 1
+      if guess == self.target_word:
+        self.game_won = True
       else:
-        taken_guesses.append(guess)
-        dist_to_target = len(fetch_shortest_path(guess, target_word)) - 1
-        print(f"Guesses so far: {taken_guesses}. Try to get to {target_word}. You are at least {dist_to_target} steps away")
-        guess_options = get_synonyms(guess)
+        path = self.fetch_shortest_path(guess, self.target_word)
+        dist = len(path) - 1
 
-  if(game_won):
-    print("🎉🎉🎉 Hooray 🎉🎉🎉!")
+        self.taken_guesses.append((guess, dist))
+        self.current_word = guess
 
-print("Initializing game play!")
-path = game_setup()
-print("Secret path")
-print(path)
-
-play_the_game(path, 5)
-
-# Close connection
-conn.close()
+    def complete_game(self):
+        self.dbconn.close()
