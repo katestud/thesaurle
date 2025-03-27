@@ -55,8 +55,9 @@ class Game:
         return self.current_guesses
 
     def receive_guess(self, guess):
+      print(f"received {guess}")
       self.turns_taken += 1
-      if guess == target_word:
+      if guess == self.target_word:
         self.game_won = True
       else:
         self.taken_guesses.append(guess)
