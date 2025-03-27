@@ -141,19 +141,18 @@ class NextSynonyms(Widget):
 
 
 class GameScreen(Screen):
+    """Actual Game Play Screen"""
 
     BINDINGS = []
     MESSAGES = [GuessHighlightedMessage, GuessSelectedMessage]
-    """An app to explore synonyms."""
 
     def on_guess_highlighted_message(self, message: GuessHighlightedMessage) -> None:
-        """Update the label when receiving a selection highlight event."""
+        """Update the future guesses in the right panel when receiving a selection highlight event."""
         options = self.game.get_synonyms(message.selection)
         self.next_synonyms.update(options)
 
     def on_guess_selected_message(self, message: GuessSelectedMessage) -> None:
-        # this is the core event
-        # we need to take a turn but then fire other events
+        """Register the guess with the game and determine next steps"""
         self.game.send_guess(message.selection)
         if self.game.game_won:
             self.app.push_screen(WonScreen())
@@ -177,7 +176,6 @@ class GameScreen(Screen):
         self.guess_options = GuessOptionsComponent(self.game)
         self.next_synonyms = NextSynonyms(self.game)
 
-        # Set border titles
         self.guess_options.border_title = "Make a word selection"
         self.path_taken.border_title = "Path"
         self.next_synonyms.border_title = "Your Next Options"
@@ -236,6 +234,7 @@ class LostScreen(SplashScreen):
 
 
 class ThesaurleApp(App):
+    """An app to explore synonyms."""
 
     CSS_PATH = "app.tcss"
 
