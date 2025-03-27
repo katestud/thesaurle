@@ -75,14 +75,6 @@ class PathTakenList(Static):
         return Label(f"{word} {dist if dist is not None else ''}", classes=(f"path-taken-item {extra_class}"))
 
 
-class GameOverMessage(Message):
-    """Custom message sent when the game is over."""
-
-    def __init__(self, game: Game) -> None:
-        super().__init__()
-        self.game = game
-
-
 class GuessHighlightedMessage(Message):
     """Custom message sent when a guess is highlighted."""
 
@@ -197,7 +189,7 @@ class GameScreen(Screen):
         yield self.next_synonyms
 
 
-## Can be used for debugging :)
+# Can be used for debugging :)
 class LabelTest(Static):
     def compose(self) -> ComposeResult:
         classes = [
