@@ -24,11 +24,16 @@ NextSynonyms {
 }
 
 .path-taken-item {
-  width: 100%
+  width: 100%;
+  color: $text-muted;
 }
 
 .near-guess {
   background: $success;
+}
+
+.mid-guess {
+  background: $warning;
 }
 
 .far-guess {

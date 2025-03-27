@@ -9,6 +9,7 @@ from app_game import Game
 
 GAME_GUESS_THRESHOLD = 10
 
+
 class PathTakenList(Static):
     """A widget to display all previous moves by the user, and the ultimate goal."""
 
@@ -35,45 +36,41 @@ class PathTakenList(Static):
             self.mount(label)
 
     def current_labels(self):
-      labels = []
-      for index, (word, dist) in enumerate(self.path):
-          if index == 0:
-              word = f"[b]{word}[/b]"
-          elif index == len(self.path) - 1:
-              word = f"{word} *"
-          labels.append(self.label(word, dist))
+        labels = []
+        for index, (word, dist) in enumerate(self.path):
+            if index == 0:
+                word = f"[b]{word}[/b]"
+            elif index == len(self.path) - 1:
+                word = f"{word} *"
+            labels.append(self.label(word, dist))
 
-      for _ in range(GAME_GUESS_THRESHOLD - len(self.path)):
-          labels.append(self.label(".", None))
+        for _ in range(GAME_GUESS_THRESHOLD - len(self.path)):
+            labels.append(self.label(".", None))
 
-      labels.append(self.label(self.game.target_word, None))
+        labels.append(self.label(self.game.target_word, None))
 
-      return labels
+        return labels
 
     def label(self, word, dist):
         extra_class = ""
         if not dist:
             extra_class = ""
-        elif dist >= 10:
+        elif dist >= 8:
             extra_class += "far-guess"
-        elif dist == 9:
-            extra_class += "far-guess light-10"
-        elif dist == 8:
-            extra_class += "far-guess light-20"
         elif dist == 7:
             extra_class += "far-guess light-30"
         elif dist == 6:
-            extra_class += "far-guess light-40"
-        elif dist == 5:
             extra_class += "far-guess light-50"
+        elif dist == 5:
+            extra_class += "mid-guess"
         elif dist == 4:
-            extra_class += "near-guess light-40"
+            extra_class += "mid-guess light-30"
         elif dist == 3:
-            extra_class += "near-guess light-30"
+            extra_class += "near-guess light-40"
         elif dist == 2:
             extra_class += "near-guess light-20"
         elif dist == 1:
-            extra_class += "near-guess light-10"
+            extra_class += "near-guess"
 
         return Label(f"{word} {dist if dist is not None else ''}", classes=(f"path-taken-item {extra_class}"))
 
@@ -130,7 +127,7 @@ class GuessOptionsComponent(Widget):
 
     def on_selection_list_selection_toggled(self, event: SelectionList.SelectionToggled) -> None:
         """Handle selected item and broadcast which item is selected."""
-        self.post_message(GuessSelectedMessage(event.selection.value))  
+        self.post_message(GuessSelectedMessage(event.selection.value))
 
 
 class NextSynonyms(Widget):
@@ -150,11 +147,13 @@ class NextSynonyms(Widget):
         self.data = new_data
         self.component.update(self.data)
 
+
 class GameScreen(Screen):
 
     BINDINGS = []
     MESSAGES = [GuessHighlightedMessage, GuessSelectedMessage]
     """An app to explore synonyms."""
+
     def on_guess_highlighted_message(self, message: GuessHighlightedMessage) -> None:
         """Update the label when receiving a selection highlight event."""
         options = self.game.get_synonyms(message.selection)
@@ -165,15 +164,15 @@ class GameScreen(Screen):
         # we need to take a turn but then fire other events
         self.game.send_guess(message.selection)
         if self.game.game_won:
-          self.app.push_screen(WonScreen())
-          self.game.complete_game()
+            self.app.push_screen(WonScreen())
+            self.game.complete_game()
         elif self.game.turns_taken >= GAME_GUESS_THRESHOLD:
-          self.app.push_screen(LostScreen())
-          self.game.complete_game()
+            self.app.push_screen(LostScreen())
+            self.game.complete_game()
         else:
-          self.path_taken.update([(guess, distance)
-                                for guess, distance in self.game.taken_guesses])
-          self.guess_options.update()
+            self.path_taken.update([(guess, distance)
+                                    for guess, distance in self.game.taken_guesses])
+            self.guess_options.update()
 
     def compose(self) -> ComposeResult:
         """Create child widgets for the app."""
@@ -198,11 +197,21 @@ class GameScreen(Screen):
         yield self.next_synonyms
 
 
+## Can be used for debugging :)
+class LabelTest(Static):
+    def compose(self) -> ComposeResult:
+        classes = [
+            "far-guess", "far-guess light-10", "far-guess light-20", "far-guess light-30", "far-guess light-40", "far-guess light-50", "mid-guess", "mid-guess light-10", "mid-guess light-20", "mid-guess light-30", "mid-guess light-40", "mid-guess light-50", "near-guess light-40", "near-guess light-30", "near-guess light-20", "near-guess light-10", ]
+
+        for className in classes:
+            yield Label(f"{className}", classes=(f"path-taken-item {className}"))
+
+
 class SplashScreen(Screen):
 
     def __init__(self):
-        super().__init__()  # Calls Parent's __init__
-        self.message = "Welcome to Thesaurle!"
+        super().__init__()
+        self.message = "Welcome to\nThe Saurus 🦖"
         self.button_text = "Start Game"
 
     def compose(self) -> ComposeResult:
@@ -219,16 +228,18 @@ class SplashScreen(Screen):
         game_screen = GameScreen()
         self.app.push_screen(game_screen)
 
+
 class WonScreen(SplashScreen):
     def __init__(self):
         super().__init__()
-        self.message = "🎉🎉🎉You won!🎉🎉🎉"
+        self.message = "🦕You Won!🦕"
         self.button_text = "Play Again"
+
 
 class LostScreen(SplashScreen):
     def __init__(self):
         super().__init__()
-        self.message = "You Lose!"
+        self.message = "🌋 You Lose! ☄️"
         self.button_text = "Play Again"
 
 
@@ -239,7 +250,6 @@ class ThesaurleApp(App):
     def on_mount(self) -> None:
         self.theme = "tokyo-night"
         self.push_screen(SplashScreen())
-
 
 
 if __name__ == "__main__":
