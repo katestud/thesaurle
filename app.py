@@ -5,35 +5,56 @@ from textual.widgets import Footer, Header, SelectionList, Label, Static, Pretty
 from textual.widgets.selection_list import Selection
 from app_game import Game
 
-TOTAL_MOVES = 10
-
 
 class PathTakenList(Static):
     """A widget to display all previous moves by the user, and the ultimate goal."""
 
     def __init__(self) -> None:
         super().__init__()
-        self.path = [self.app.game.start_word]
+        # Initialize path as a list of tuples, e.g., [(word, dist)]
+        # Correctly structured as a list of tuples
+        self.path = [(self.app.game.start_word, self.app.game.initial_path_length)]
 
     def compose(self) -> ComposeResult:
-        """Yield each path item as a Label inside the Static widget."""
-        for p in self.path:
-            yield Label(p, classes="path-taken-item")
+        for word, dist in self.path:
+            # Display the word and distance
+            yield self.label(word, dist)
 
-    def append(self, new_item: str) -> None:
-        """Update the path and refresh the widget."""
-        self.path.append(new_item)
-        self.update()
+    def update(self, new_path: list[tuple[str, int]]) -> None:
+        """Update the path with a new list of tuples."""
+        self.path = new_path
 
-    def update(self) -> None:
-        """Clear current items and re-yield the updated list of Labels."""
-        # Remove existing labels by querying for children and removing each one
-        for child in list(self.query(Label)):  # Query all Label widgets
-            child.remove()  # Remove each child one by one
+        # Clear current items and re-yield the updated list of Labels
+        for child in list(self.query(Label)):
+            child.remove()
 
-        # Add updated labels
-        for p in self.path:
-            self.mount(Label(p, classes="path-taken-item"))
+        for word, dist in self.path:
+            self.mount(self.label(word, dist))
+
+    def label(self, word, dist):
+      extra_class = ""
+      if dist >= 10:
+        extra_class += "far-guess"
+      elif dist == 9:
+        extra_class += "far-guess light-10"
+      elif dist == 8:
+        extra_class += "far-guess light-20"
+      elif dist == 7:
+        extra_class += "far-guess light-30"
+      elif dist == 6:
+        extra_class += "far-guess light-40"
+      elif dist == 5:
+        extra_class += "far-guess light-50"
+      elif dist == 4:
+        extra_class += "near-guess light-40"
+      elif dist == 3:
+        extra_class += "near-guess light-30"
+      elif dist == 2:
+        extra_class += "near-guess light-20"
+      elif dist == 1:
+        extra_class += "near-guess light-10"
+
+      return Label(f"{word} {dist}", classes=(f"near-guess path-taken-item {extra_class}"))
 
 
 class GuessHighlightedMessage(Message):
@@ -55,21 +76,30 @@ class GuessSelectedMessage(Message):
 class GuessOptionsComponent(Widget):
     """A custom widget that contains a SelectionList of Options."""
 
+    def __init__(self) -> None:
+        super().__init__()
+        self.options = self.app.game.available_guesses()
+
     def compose(self) -> ComposeResult:
-        words = self.app.game.available_guesses()
         self.selection_list = SelectionList[str](
-            *[Selection(word, word) for word in words]
+            *[Selection(word, word) for word in self.options]
         )
         yield self.selection_list
 
-    def on_selection_list_selection_highlighted(self, event: SelectionList.SelectionHighlighted) -> None:
-        """Handle selection highlight and broadcast which item is selected."""
-        highlighted_item = event.selection.value
+    def update(self) -> None:
+        """Update the options in the SelectionList."""
+        self.selection_list.clear_options()
 
+        for word in self.app.game.available_guesses():
+            self.selection_list.add_option(Selection(word, word))
+
+    def on_selection_list_selection_highlighted(self, event: SelectionList.SelectionHighlighted) -> None:
+        """Handle selection highlight and broadcast which item is highlighted."""
         self.app.post_message(
-            GuessHighlightedMessage(highlighted_item))
+            GuessHighlightedMessage(event.selection.value))
 
     def on_selection_list_selection_toggled(self, event: SelectionList.SelectionToggled) -> None:
+        """Handle selected item and broadcast which item is selected."""
         self.app.post_message(GuessSelectedMessage(event.selection.value))
 
 
@@ -105,8 +135,9 @@ class ThesaurleApp(App):
     def on_guess_selected_message(self, message: GuessSelectedMessage) -> None:
         # this is the core event
         # we need to take a turn but then fire other events
-        self.path_taken.append(message.selection)
-        print(f"selected {message.selection}")
+        self.game.receive_guess(message.selection)
+        self.path_taken.update([(guess, distance) for guess, distance in self.game.taken_guesses])
+        self.guess_options.update()
 
     def compose(self) -> ComposeResult:
         """Create child widgets for the app."""

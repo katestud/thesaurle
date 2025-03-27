@@ -13,9 +13,10 @@ class Game:
         direct_path = self.fetch_shortest_path(start, end)
 
         self.initial_path = direct_path
+        self.initial_path_length = len(direct_path) - 1
         self.turns_taken = 0
         self.game_won = False
-        self.taken_guesses = []
+        self.taken_guesses = [(start, len(direct_path) - 1)]
         self.start_word = start
         self.target_word = end
         self.current_word = start
@@ -55,12 +56,14 @@ class Game:
         return self.current_guesses
 
     def receive_guess(self, guess):
-      print(f"received {guess}")
       self.turns_taken += 1
       if guess == self.target_word:
         self.game_won = True
       else:
-        self.taken_guesses.append(guess)
+        path = self.fetch_shortest_path(guess, self.target_word)
+        dist = len(path) - 1
+
+        self.taken_guesses.append((guess, dist))
         self.current_word = guess
 
     def complete_game(self):
