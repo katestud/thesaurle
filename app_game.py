@@ -11,6 +11,7 @@ class Game:
         start, end, _ = random.choice(lines).split(",")
 
         direct_path = self.fetch_shortest_path(start, end)
+        print(direct_path)
 
         self.initial_path = direct_path
         self.initial_path_length = len(direct_path) - 1
@@ -55,7 +56,7 @@ class Game:
         self.current_guesses = self.get_synonyms(self.current_word)
         return self.current_guesses
 
-    def receive_guess(self, guess):
+    def send_guess(self, guess):
       self.turns_taken += 1
       if guess == self.target_word:
         self.game_won = True
