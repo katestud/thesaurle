@@ -1,0 +1,61 @@
+Screen {
+  layout: horizontal;
+}
+
+ListView {
+  height: 100%;
+}
+
+PathTakenList {
+  width: 2fr;
+  height: 100%;
+  border: solid $panel;
+}
+
+GuessOptionsComponent {
+  width: 4fr;
+  height: 100%;
+border: solid $accent;
+}
+
+NextSynonyms {
+  width: 6fr;
+  border: solid $panel;
+}
+
+.path-taken-item {
+  width: 100%
+}
+
+.near-guess {
+  background: $success;
+}
+
+.far-guess {
+  background: $error;
+}
+
+.light-10 {
+  background-tint: white 10%;
+}
+
+.light-20 {
+  background-tint: white 20%;
+}
+
+.light-30 {
+  background-tint: white 30%;
+}
+
+.light-40 {
+  background-tint: white 40%;
+}
+
+.light-50 {
+  background-tint: white 50%;
+}
+
+.start-word {
+  text-style: bold;
+}
+
