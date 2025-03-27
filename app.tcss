@@ -15,7 +15,7 @@ PathTakenList {
 GuessOptionsComponent {
   width: 4fr;
   height: 100%;
-border: solid $accent;
+  border: solid $accent;
 }
 
 NextSynonyms {

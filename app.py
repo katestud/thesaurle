@@ -126,11 +126,11 @@ class GuessOptionsComponent(Widget):
 
     def on_selection_list_selection_highlighted(self, event: SelectionList.SelectionHighlighted) -> None:
         """Handle selection highlight and broadcast which item is highlighted."""
-        self.post_message(GuessHighlightedMessage(event.selection.value))  # Changed from self.app.post_message
+        self.post_message(GuessHighlightedMessage(event.selection.value))
 
     def on_selection_list_selection_toggled(self, event: SelectionList.SelectionToggled) -> None:
         """Handle selected item and broadcast which item is selected."""
-        self.post_message(GuessSelectedMessage(event.selection.value))  # Changed from self.app.post_message
+        self.post_message(GuessSelectedMessage(event.selection.value))  
 
 
 class NextSynonyms(Widget):
