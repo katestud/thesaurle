@@ -11,19 +11,28 @@ For Thesaurle, we wanted to take a different approach. Let's source _actual syno
 from a variety of sources and build up a game which allows users to navigate
 from one word to another by following a path through synonyms.
 
-Data collection is still in progress.
+## Sources / Method
 
-## Sources
+In order to facilitate a more semantically-related experience, we built our own
+thesaurus dictionary using the following method:
 
-- Game play is currently sourcing synonyms from an [API Ninjas](https://api.api-ninjas.com/v1/thesaurus) thesaurus API. Game play fetches these synonyms on the fly.
-- Ultimately, we want to build up our own dictionary of synonyms. Sources include:
-  - 20,000 most common words occurring in the English language. Currently stored in `data/first20hours-google-10000-english-20k.txt`. This is sourced from [this repo](https://github.com/first20hours/google-10000-english). There may be profanity included in this list, so tread carefully.
-  - The remainder of synonyms are sourced using a subset of sources using the [`wordhoard`](https://wordhoard.readthedocs.io/en/latest/) library (specifically 'merriam-webster', 'synonym.com', 'thesaurus.com'. The remaining sources from wordhoard have too stringent of a CloudFlare DDoS mitigation for the purpose of this project)
+- Fetch The 20,000 most common words occurring in the English language. This data set was sourced from [this repo](https://github.com/first20hours/google-10000-english).
+- Removed "obscene" words by scrubbing words which occur in [LDNOOBW/List-of-Dirty-Naughty-Obscene-and-Otherwise-Bad-Words](https://github.com/LDNOOBW/List-of-Dirty-Naughty-Obscene-and-Otherwise-Bad-Words/blob/master/en)
+- Sourced synonyms using a subset of sources available via the [`wordhoard`](https://wordhoard.readthedocs.io/en/latest/) library (specifically 'merriam-webster', 'synonym.com', 'thesaurus.com'. The remaining sources from wordhoard have too stringent of a CloudFlare DDoS mitigation for the purpose of this project).
+- Data was imported into a Memgraph Graph Database for further querying and to
+facilitate game play. The game is powered by a number of pre-calculated word pairs
+which have a known path and shortest distance.
 
-## GraphDB:
+## Development Notes:
 
-Data can now be stored and queried using a Memgraph database. This is implemented
-using docker (currently).
+The project takes a dependency on the memgraph docker container and also requires
+that textual is installed to power the UI.
+
+To install dependencies:
+```
+pip install textual
+pip install textual-dev
+```
 
 To start up the database server:
 
@@ -59,3 +68,13 @@ To migrate data (insert it into the database), run the migration file:
 `python db/migrate.py`. This only needs to be run once (unless it changes).
 
 To run sample queries against the database, execute `python sample_queries.py`.
+
+To run the game itself:
+
+- In Debug Mode:
+  - Run `textual console` in one window. Printed statements will appear here.
+  - Run `textual run --dev app.py` in another window for game play
+- In Regular Mode:
+  - Run `python app.py`
+
+(Coming in the future: Running the game in the browser via Textual Web?)
