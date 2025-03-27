@@ -5,7 +5,7 @@ from textual.widgets import Footer, Header, SelectionList, Label, Static, Pretty
 from textual.widgets.selection_list import Selection
 from textual.screen import Screen
 from textual.containers import Container
-from app_game import Game
+from game import Game
 
 GAME_GUESS_THRESHOLD = 10
 

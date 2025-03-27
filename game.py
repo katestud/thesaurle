@@ -9,6 +9,9 @@ class Game:
 
         lines = open("data/possible_pairs.txt").read().splitlines()
         start, end, _ = random.choice(lines).split(",")
+        # HARD CODING FOR THE DEMO SO IT'S EASIER
+        start = "similarly"
+        end = "alien"
 
         direct_path = self.fetch_shortest_path(start, end)
         print(direct_path)
