@@ -53,7 +53,10 @@ class Game:
         return syns
 
     def available_guesses(self):
-        self.current_guesses = self.get_synonyms(self.current_word)
+        possible_guesses = self.get_synonyms(self.current_word)
+        taken, _ = zip(*self.taken_guesses)
+        self.current_guesses = list(set(possible_guesses) - set(taken))
+
         return self.current_guesses
 
     def send_guess(self, guess):
